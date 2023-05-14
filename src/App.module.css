@@ -1,0 +1,9 @@
+.container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.title {
+  margin-top: 100px;
+  text-align: center;
+}
