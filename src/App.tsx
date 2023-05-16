@@ -1,9 +1,10 @@
-import styles from './App.module.css';
+import React from "react";
+import "./index.css";
 
 function App() {
   return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>
+    <div className="p-4">
+      <h1 className="text-align: center">
         Project Setup for SE701 G9 - Colourful Adventures
       </h1>
     </div>
