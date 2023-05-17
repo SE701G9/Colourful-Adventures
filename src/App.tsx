@@ -1,13 +1,29 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./index.css";
+import LandingPage from "./pages/LandingPage";
+import NavigationPage from "./pages/NavigationPage";
+import Module1Page from "./pages/Module1Page";
+import Module2Page from "./pages/Module2Page";
+import Module3Page from "./pages/Module3Page";
 
 function App() {
   return (
-    <div className="p-4">
-      <h1 className="text-align: center">
-        Project Setup for SE701 G9 - Colourful Adventures
-      </h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        
+        <Route path="modules">
+          <Route index element={<NavigationPage />} />
+          <Route path="1" element={<Module1Page />} />
+          <Route path="2" element={<Module2Page />} />
+          <Route path="3" element={<Module3Page />} />
+
+        </Route>
+
+      </Routes>
+    </Router>
+   
   );
 }
 
