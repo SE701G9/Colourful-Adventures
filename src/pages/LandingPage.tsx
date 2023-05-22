@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import SettingsButton from '../components/SettingsButton';
 import './LandingPage.css';
+import ModalContainer from '../components/ModalContainer';
+import Settings from '../components/Settings';
 
 export default function LandingPage() {
   const navigate = useNavigate();
+  const [isSettingsOpen, setIsSettingsOpen] = useState<boolean>(true);
+
+  const toggleSettings = () => setIsSettingsOpen((prev) => !prev);
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     console.log('clicked');
@@ -11,11 +17,20 @@ export default function LandingPage() {
   };
 
   return (
-    <div className="landing-page">
+    <main className="landing-page">
+      <SettingsButton
+        isSettingsOpen={isSettingsOpen}
+        onClick={toggleSettings}
+      />
       <div className="landing-page-center-container">
         <img src={require('../images/title.png')} />
         <button onClick={handleClick}>- Start -</button>
       </div>
-    </div>
+      {isSettingsOpen && (
+        <ModalContainer>
+          <Settings />
+        </ModalContainer>
+      )}
+    </main>
   );
 }
