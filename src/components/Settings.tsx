@@ -4,6 +4,9 @@ import SliderSetting from './SliderSetting';
 import SwitchSetting from './SwitchSetting';
 
 const Settings = () => {
+  /**
+   * TODO: I think these three states should be held in React context as they are needed globally
+   */
   const [isColorBlindChecked, setIsColorBlindChecked] = useState<boolean>(true);
   const [soundVolume, setSoundVolume] = useState<number>(50);
   const [effectVolume, setEffectVolume] = useState<number>(50);

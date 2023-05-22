@@ -7,12 +7,11 @@ import Settings from '../components/Settings';
 
 export default function LandingPage() {
   const navigate = useNavigate();
-  const [isSettingsOpen, setIsSettingsOpen] = useState<boolean>(true);
+  const [isSettingsOpen, setIsSettingsOpen] = useState<boolean>(false);
 
   const toggleSettings = () => setIsSettingsOpen((prev) => !prev);
 
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    console.log('clicked');
+  const handleClick = () => {
     navigate('/modules');
   };
 
