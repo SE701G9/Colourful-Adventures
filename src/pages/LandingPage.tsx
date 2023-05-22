@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import './LandingPage.css';
 
 export default function LandingPage() {
   const navigate = useNavigate();
@@ -10,9 +11,11 @@ export default function LandingPage() {
   };
 
   return (
-    <div>
-      <h1>Colour Adventures</h1>
-      <button onClick={handleClick}> - Start - </button>
+    <div className="landing-page">
+      <div className="landing-page-center-container">
+        <img src={require('../images/title.png')} />
+        <button onClick={handleClick}>- Start -</button>
+      </div>
     </div>
   );
 }
