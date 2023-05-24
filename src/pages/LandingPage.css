@@ -2,7 +2,7 @@
   position: relative;
   background-color: #f2eace;
   height: 100vh;
-  background-image: url('../images/landing_background.png');
+  background-image: url('../images/landing-images/landing_background.png');
   background-size: cover;
   background-position: center;
   display: flex;

@@ -1,0 +1,10 @@
+.navigation-page{
+    position: relative;
+    background-color: #f2eace;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

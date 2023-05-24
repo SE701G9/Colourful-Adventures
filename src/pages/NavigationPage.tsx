@@ -1,15 +1,31 @@
 import React, {useState} from "react";
+import { useNavigate } from 'react-router-dom';
+import SettingsButton from '../components/SettingsButton';
+import Settings from '../components/Settings';
+import ModalContainer from '../components/ModalContainer';
+import './NavigationPage.css';
 
 export default function NavigationPage() {
+  const navigate = useNavigate();
+  const [isSettingsOpen, setIsSettingsOpen] = useState<boolean>(false);
+
+  const toggleSettings = () => setIsSettingsOpen((prev) => !prev);
+
+
   return (
-    <>
-      <h1>Modules Page</h1>
-      <ul>
-        <li>First module: Basic Colour Wheel</li>
-        <li>Second module: Advanced Colour Wheel</li>
-        <li>Third module: Colour Concepts</li>
-      </ul>
-    </>
-    
+    <main className="navigation-page">
+      <SettingsButton
+        isSettingsOpen={isSettingsOpen}
+        onClick={toggleSettings}
+      />
+      <div className="navigation-page-top-container">
+        <img src={require('../images/navigation-images/title.png')} alt="Choose a topic" />
+      </div>
+      {isSettingsOpen && (
+        <ModalContainer>
+          <Settings />
+        </ModalContainer>
+      )}
+    </main>
   )
 }

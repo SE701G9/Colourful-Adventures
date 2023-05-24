@@ -22,7 +22,7 @@ export default function LandingPage() {
         onClick={toggleSettings}
       />
       <div className="landing-page-center-container">
-        <img src={require('../images/title.png')} />
+        <img src={require('../images/landing-images/title.png')} />
         <button onClick={handleClick}>- Start -</button>
       </div>
       {isSettingsOpen && (
