@@ -1,0 +1,32 @@
+.landing-page {
+  position: relative;
+  background-color: #f2eace;
+  height: 100vh;
+  background-image: url('../images/landing_background.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-page-center-container {
+  font-family: 'Jeju Hallasan', cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+}
+
+.landing-page-center-container img {
+  width: 900px;
+}
+
+.landing-page-center-container button {
+  font-size: 4em;
+  transition: color 0.2s;
+}
+
+.landing-page-center-container button:hover {
+  color: gray;
+}
