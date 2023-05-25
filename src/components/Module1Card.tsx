@@ -16,9 +16,17 @@ const bull = (
 
   export default function ModuleCard() {
     return (
-      <Card sx={{ width: 270, height: 400, borderRadius: 5, boxShadow: 5, marginRight: 5, marginLeft: 5 }}>
+      <Card sx={{ width: 270, height: 400, borderRadius: 5, boxShadow: 5, marginRight: 5, marginLeft: 5, backgroundColor: "#FFCE51" }}>
         <CardContent>
-          
+        <Typography align='center' sx={{fontSize: 40, fontFamily: 'Jeju Hallasan'}}>
+            Level 1
+          </Typography>
+          <Typography align='center' sx={{fontSize: 25, fontFamily: 'Jeju Hallasan'}}>
+            Basic 
+          </Typography>
+          <Typography align='center' sx={{fontSize: 25, fontFamily: 'Jeju Hallasan'}}>
+            Colour Wheel
+          </Typography>
         </CardContent>
         <CardActions>
         </CardActions>

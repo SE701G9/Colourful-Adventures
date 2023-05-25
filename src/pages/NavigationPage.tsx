@@ -4,7 +4,9 @@ import SettingsButton from '../components/SettingsButton';
 import Settings from '../components/Settings';
 import ModalContainer from '../components/ModalContainer';
 import './NavigationPage.css';
-import ModuleCard from "../components/ModuleCard";
+import Module1Card from "../components/Module1Card";
+import Module2Card from "../components/Module2Card";
+import Module3Card from "../components/Module3Card";
 
 export default function NavigationPage() {
   const navigate = useNavigate();
@@ -23,9 +25,9 @@ export default function NavigationPage() {
         <img src={require('../images/navigation-images/title.png')} alt="Choose a topic"  />
       </div>
       <div className="navigation-page-center-container">
-        <ModuleCard/>
-        <ModuleCard/>
-        <ModuleCard/>
+        <Module1Card/>
+        <Module2Card/>
+        <Module3Card/>
       </div>
       {isSettingsOpen && (
         <ModalContainer>

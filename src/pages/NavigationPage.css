@@ -11,5 +11,11 @@
 
 .navigation-page-top-container{
     position: absolute;
-    top: 70px;
+    top: 60px;
+}
+
+.navigation-page-center-container{
+    margin-top: 70px;
+    display: flex;
+    flex-direction: row;
 }
