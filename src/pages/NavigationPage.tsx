@@ -22,7 +22,7 @@ export default function NavigationPage() {
         onClick={toggleSettings}
       />
       <div className="navigation-page-top-container">
-        <img src={require('../images/navigation-images/title.png')} alt="Choose a topic"  />
+        <img src={require('../images/navigation-images/title.png')} alt="Choose a topic" />
       </div>
       <div className="navigation-page-center-container">
         <div className="module-1-card">
