@@ -25,9 +25,15 @@ export default function NavigationPage() {
         <img src={require('../images/navigation-images/title.png')} alt="Choose a topic"  />
       </div>
       <div className="navigation-page-center-container">
-        <Module1Card/>
-        <Module2Card/>
-        <Module3Card/>
+        <div className="module-1-card">
+          <Module1Card/>
+        </div>
+        <div className="module-2-card">
+          <Module2Card/>
+        </div>
+        <div className="module-3-card">
+          <Module3Card/>
+        </div>
       </div>
       {isSettingsOpen && (
         <ModalContainer>

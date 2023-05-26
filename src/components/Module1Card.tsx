@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -10,7 +9,7 @@ import { Link } from 'react-router-dom';
 
     return (
       <Link to={"/modules/1"}>
-        <Card sx={{ width: 270, height: 400, borderRadius: 5, boxShadow: 5, marginRight: 5, marginLeft: 5, backgroundColor: "#FFCE51" }}>
+        <Card sx={{ width: 270, height: 400, borderRadius: 5, boxShadow: 5, backgroundColor: "#FFCE51" }}>
           <CardContent>
             <Typography align='center' sx={{fontSize: 40, fontFamily: 'Jeju Hallasan'}}>
                 Level 1

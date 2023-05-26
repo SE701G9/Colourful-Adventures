@@ -19,3 +19,16 @@
     display: flex;
     flex-direction: row;
 }
+
+.module-1-card{
+    margin-right: 50px;
+}
+
+.module-2-card{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.module-3-card{
+    margin-left: 50px;
+}
