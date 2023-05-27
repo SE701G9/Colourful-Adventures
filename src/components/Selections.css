@@ -1,0 +1,47 @@
+.selections-container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.selections-header {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 100px;
+}
+
+.selections-title {
+  font-size: 4.5em;
+  font-family: 'Jeju Hallasan', cursive;
+}
+
+.selections-topic {
+  font-size: 2em;
+  font-family: sans-serif;
+  padding-left: 50px;
+  line-height: 0.5;
+}
+
+.selections-body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.selections-buttons {
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.selections-ball {
+  position: fixed;
+  bottom: 20px;
+  right: 200px;
+  width: 700px;
+}

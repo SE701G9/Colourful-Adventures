@@ -1,0 +1,11 @@
+.module-layout-container {
+  position: relative;
+  background-color: #f2eace;
+  height: 100vh;
+}
+
+.mascot-image {
+  position: fixed;
+  bottom: 60px;
+  right: 30px;
+}
