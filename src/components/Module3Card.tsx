@@ -5,12 +5,18 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 import { CardMedia } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import "./Module3Card.css"
 
   export default function ModuleCard() {
+
+    const StyledCard = styled(Card)(({ theme }) => ({
+      "&:hover": { transform: "scale3d(1.02, 1.02, 1)" },
+    }))
+
     return (
       <Link to={"/modules/3"}>
-        <Card sx={{ width: 500, height: 650, borderRadius: 5, boxShadow: 5, border: 4, backgroundColor: "#FF6666" }}>
+        <StyledCard sx={{ width: 500, height: 650, borderRadius: 5, boxShadow: 5, border: 4, backgroundColor: "#FF6666" }}>
             <CardContent>
                 <div className="level-title">
                   <Typography align='center' sx={{fontSize: 60, fontFamily: 'Jeju Hallasan'}}>
@@ -31,7 +37,7 @@ import "./Module3Card.css"
             />
             <CardActions>
             </CardActions>
-        </Card>
+        </StyledCard>
       </Link>
     );
   }

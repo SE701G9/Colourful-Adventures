@@ -5,12 +5,18 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { CardMedia } from '@mui/material';
 import { Link } from 'react-router-dom';
+import { styled } from '@mui/material/styles';
 
 
   export default function ModuleCard() {
+
+    const StyledCard = styled(Card)(({ theme }) => ({
+      "&:hover": { transform: "scale3d(1.02, 1.02, 1)" },
+    }))
+
     return (
       <Link to={"/modules/2"}>
-        <Card sx={{ width: 500, height: 650, borderRadius: 5, boxShadow: 5, border: 4, backgroundColor: "#FF9559" }}>
+        <StyledCard sx={{ width: 500, height: 650, borderRadius: 5, boxShadow: 5, border: 4, backgroundColor: "#FF9559" }}>
           <CardMedia>
               {/**
                * The stars picture?
@@ -39,7 +45,7 @@ import { Link } from 'react-router-dom';
           />
           <CardActions>
           </CardActions>
-        </Card>
+        </StyledCard>
       </Link>
     );
   }
