@@ -2,9 +2,10 @@ import React from "react";
 import './DialogueBox.css';
 import DialogueButton from "./DialogueButton";
 
-/*type DialogueProps = {
+type DialogueBoxProps = {
+    message : string;
     children : React.ReactNode;
-}*/
+}
 
 const changeDialogue = () => {
     alert('Hello!');
@@ -19,11 +20,10 @@ function Dialogue(props: DialogueProps){
 }
 
 
-const DialogueBox = () => (
+const DialogueBox = ({message}: DialogueBoxProps) => (
     <div className="dialogue-box">{}
         <div className="dialogue-message">
-            <Dialogue 
-                message= "Poor bird… That’s okay! Caramel can help you remember who you are. Don’t you worry!"/>
+            <h1> {message}</h1>
         </div>
         <DialogueButton 
             onClick={changeDialogue}>

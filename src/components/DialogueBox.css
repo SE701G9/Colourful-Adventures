@@ -8,7 +8,8 @@
     border-radius: 50px;
     background-color: #ECCF6D;
     display: block;
-    padding: 30px 60px;
+    padding: 50px 60px;
+    z-index: 0;
   }  
 
   .dialogue-message{
