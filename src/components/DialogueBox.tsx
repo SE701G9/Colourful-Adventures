@@ -7,6 +7,7 @@ type DialogueBoxProps = {
     children : React.ReactNode;
 }
 
+/*Will need to change this method, likely will need another prop that is put into DialogueMenu from the pages that use it to send through an onclick method*/
 const changeDialogue = () => {
     alert('Hello!');
 }

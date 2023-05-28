@@ -11,6 +11,7 @@ export default function NavigationPage() {
         <li>Second module: Advanced Colour Wheel</li>
         <li>Third module: Colour Concepts</li>
       </ul>
+      {/*Just using the Navigation Page to test out the Dialogue Menu, please ignore for now. I will remove it when the game pages are setup*/}
       <div className="dialogue-menu">
         <DialogueMenu
           name = "Picasso"
