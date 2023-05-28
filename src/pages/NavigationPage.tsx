@@ -1,4 +1,5 @@
 import React from "react";
+import DialogueBox from '../components/DialogueBox';
 
 export default function NavigationPage() {
   return (
@@ -9,6 +10,9 @@ export default function NavigationPage() {
         <li>Second module: Advanced Colour Wheel</li>
         <li>Third module: Colour Concepts</li>
       </ul>
+      <div>
+        <DialogueBox></DialogueBox>
+      </div>
     </>
     
   )

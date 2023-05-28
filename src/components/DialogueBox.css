@@ -1,0 +1,17 @@
+.dialogue-box {
+    position: fixed;
+    bottom: 2.5vh;
+    right: 2.5vw;
+    width: 95vw;
+    height: 300px;
+    border: 6px solid #533A2F;
+    border-radius: 50px;
+    background-color: #ECCF6D;
+    display: block;
+    padding: 30px 60px;
+  }  
+
+  .dialogue-message{
+    font-size: 3em;
+    font-family: 'Jeju Hallasan', cursive;
+  }
