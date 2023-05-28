@@ -18,19 +18,25 @@ import { Link } from 'react-router-dom';
           </CardMedia>
           <CardContent>
             <div className="level-title">
-              <Typography align='center' sx={{fontSize: 40, fontFamily: 'Jeju Hallasan'}}>
+              <Typography align='center' sx={{fontSize: 60, fontFamily: 'Jeju Hallasan'}}>
                 Level 2
               </Typography>
             </div>
             <div className="module-title">
-              <Typography align='center' sx={{fontSize: 25, fontFamily: 'Jeju Hallasan'}}>
+              <Typography align='center' sx={{fontSize: 40, fontFamily: 'Jeju Hallasan'}}>
                 Advanced
               </Typography>
-              <Typography align='center' sx={{fontSize: 25, fontFamily: 'Jeju Hallasan'}}>
+              <Typography align='center' sx={{fontSize: 40, fontFamily: 'Jeju Hallasan'}}>
                 Colour Wheel
               </Typography>
             </div>
           </CardContent>
+          <CardMedia
+            className={"advanced-colour-wheel-image"}
+            image={require('../images/navigation-images/advanced_colour_wheel.png')}
+            title="Advanced colour wheel image"
+            sx={{height: 270, width: 300, objectFit: "contain", marginLeft: 12, marginTop: 6}}
+          />
           <CardActions>
           </CardActions>
         </Card>
