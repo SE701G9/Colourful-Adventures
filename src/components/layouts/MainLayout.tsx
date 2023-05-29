@@ -24,10 +24,6 @@ const MainLayout = ({ children }: MainLayoutProps) => {
         </ModalContainer>
       )}
       {children}
-      {/* <img
-        className="mascot-image"
-        src={require('../../images/mascot_1.png')}
-      /> */}
     </div>
   );
 };

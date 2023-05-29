@@ -1,6 +1,7 @@
 // im not sure about the naming of this page,
 // if it's changed just make sure to change it everywhere else
 
+import MainLayout from '../components/layouts/MainLayout';
 import Selections from '../components/selection/Selections';
 
 export default function ModuleOnePage() {
@@ -14,17 +15,17 @@ export default function ModuleOnePage() {
       onClick: () => console.log('Remembering clicked'),
     },
     {
-      label: 'Start of Journey',
+      label: 'Through the Lands',
       onClick: () => console.log('Start of Journey clicked'),
     },
   ];
   return (
-    <div>
+    <MainLayout>
       <Selections
         title="Basic Color Wheel"
         subTitle="Primary & Secondary Colors"
         selections={selections}
       />
-    </div>
+    </MainLayout>
   );
 }
