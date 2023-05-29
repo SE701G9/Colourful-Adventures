@@ -8,6 +8,7 @@ import Module1Card from "../components/Module1Card";
 import Module2Card from "../components/Module2Card";
 import Module3Card from "../components/Module3Card";
 
+
 export default function NavigationPage() {
   const navigate = useNavigate();
   const [isSettingsOpen, setIsSettingsOpen] = useState<boolean>(false);
@@ -41,5 +42,6 @@ export default function NavigationPage() {
         </ModalContainer>
       )}
     </main>
+
   )
 }
