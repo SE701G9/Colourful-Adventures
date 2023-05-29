@@ -9,7 +9,7 @@ type SelectionButtonProps = {
 const SelectionButton = ({ children, onClick }: SelectionButtonProps) => {
   return (
     <button className="select-button" onClick={onClick}>
-      <img src={require('../images/selection-button.png')} />
+      <img src={require('../../images/selection-button.png')} />
       <span className="selection-button-label">{children}</span>
     </button>
   );

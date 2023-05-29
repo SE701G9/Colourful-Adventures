@@ -33,7 +33,7 @@ import { styled } from '@mui/material/styles';
         </CardContent>
         <CardMedia
           className={"basic-colour-wheel-image"}
-          image={require('../images/navigation-images/basic_colour_wheel.png')}
+          image={require('../../images/navigation-images/basic_colour_wheel.png')}
           title="Basic colour wheel image"
           sx={{height: 270, width: 300, objectFit: "contain", marginLeft: 12, marginTop: 6}}
         />

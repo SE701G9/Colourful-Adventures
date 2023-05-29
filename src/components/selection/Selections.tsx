@@ -1,6 +1,6 @@
 import SelectionButton from './SelectionButton';
 import './Selections.css';
-import MainLayout from './layouts/MainLayout';
+import MainLayout from '../layouts/MainLayout';
 
 type SelectionInfo = {
   label: string;
@@ -28,7 +28,7 @@ const Selections = ({ title, subTitle, selections }: SelectionsProps) => (
             </SelectionButton>
           ))}
         </div>
-        <img className="selections-ball" src={require('../images/ball.png')} />
+        <img className="selections-ball" src={require('../../images/ball.png')} />
       </div>
     </div>
   </MainLayout>

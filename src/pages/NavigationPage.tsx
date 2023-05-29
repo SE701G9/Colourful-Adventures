@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 import { useNavigate } from 'react-router-dom';
-import SettingsButton from '../components/SettingsButton';
-import Settings from '../components/Settings';
+import SettingsButton from '../components/settings/SettingsButton';
+import Settings from '../components/settings/Settings';
 import ModalContainer from '../components/ModalContainer';
 import './NavigationPage.css';
-import Module1Card from "../components/Module1Card";
-import Module2Card from "../components/Module2Card";
-import Module3Card from "../components/Module3Card";
+import Module1Card from "../components/modules/Module1Card";
+import Module2Card from "../components/modules/Module2Card";
+import Module3Card from "../components/modules/Module3Card";
 
 
 export default function NavigationPage() {

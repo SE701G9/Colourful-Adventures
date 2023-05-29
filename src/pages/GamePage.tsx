@@ -1,7 +1,7 @@
 import './GamePage.css';
-import DialogueMenu from '../components/DialogueMenu';
+import DialogueMenu from '../components/dialogue/DialogueMenu';
 import { useState } from 'react'; 
-import { useQueueState } from "rooks";
+// import { useQueueState } from "rooks";
 
 export default function GamePage(){
 

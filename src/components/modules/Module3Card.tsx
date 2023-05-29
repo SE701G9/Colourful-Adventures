@@ -31,7 +31,7 @@ import "./Module3Card.css"
             </CardContent>
             <CardMedia
               className={"colour-concepts-image"}
-              image={require('../images/navigation-images/colour_concepts.png')}
+              image={require('../../images/navigation-images/colour_concepts.png')}
               title="Colour concepts image"
               sx={{height: 270, width: 320, objectFit: "contain", marginLeft: 11, marginTop: 11}}
             />

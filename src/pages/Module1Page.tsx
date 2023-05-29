@@ -1,7 +1,7 @@
 // im not sure about the naming of this page,
 // if it's changed just make sure to change it everywhere else
 
-import Selections from '../components/Selections';
+import Selections from '../components/selection/Selections';
 
 export default function ModuleOnePage() {
   const selections = [

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './MainLayout.css';
-import SettingsButton from '../SettingsButton';
+import SettingsButton from '../settings/SettingsButton';
 import ModalContainer from '../ModalContainer';
-import Settings from '../Settings';
+import Settings from '../settings/Settings';
 
 type MainLayoutProps = {
   children: React.ReactNode;

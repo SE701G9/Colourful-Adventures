@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import SettingsButton from '../components/SettingsButton';
+import SettingsButton from '../components/settings/SettingsButton';
 import './LandingPage.css';
 import ModalContainer from '../components/ModalContainer';
-import Settings from '../components/Settings';
+import Settings from '../components/settings/Settings';
 
 export default function LandingPage() {
   const navigate = useNavigate();
