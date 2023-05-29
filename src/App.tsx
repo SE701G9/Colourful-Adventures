@@ -6,6 +6,7 @@ import NavigationPage from "./pages/NavigationPage";
 import Module1Page from "./pages/Module1Page";
 import Module2Page from "./pages/Module2Page";
 import Module3Page from "./pages/Module3Page";
+import GamePage from "./pages/GamePage";
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
           <Route path="2" element={<Module2Page />} />
           <Route path="3" element={<Module3Page />} />
 
+        </Route>
+
+        <Route path = "game">
+          <Route index element={<GamePage />} />
         </Route>
 
       </Routes>

@@ -12,7 +12,7 @@ export default function LandingPage() {
   const toggleSettings = () => setIsSettingsOpen((prev) => !prev);
 
   const handleClick = () => {
-    navigate('/modules');
+    navigate('/game');
   };
 
   return (

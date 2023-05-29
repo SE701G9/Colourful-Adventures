@@ -5,12 +5,11 @@ import './DialogueMenu.css';
 type DialogueMenuProps = {
     name : string;
     message : string;
+    onclick: () => void;
     children : React.ReactNode; 
 }
 
-const DialogueMenu = ({name,message}: DialogueMenuProps) => {
-
-
+const DialogueMenu = ({name,message,onclick}: DialogueMenuProps) => {
 
     return(
         <div className="dialogue-menu">
@@ -18,7 +17,8 @@ const DialogueMenu = ({name,message}: DialogueMenuProps) => {
             name = {name}>
         </DialogueName>
         <DialogueBox
-            message = {message}>
+            message = {message}
+            onclick = {onclick}>
         </DialogueBox>
     </div>
     );

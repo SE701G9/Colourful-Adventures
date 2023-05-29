@@ -4,12 +4,8 @@ import DialogueButton from "./DialogueButton";
 
 type DialogueBoxProps = {
     message : string;
+    onclick: () => void;
     children : React.ReactNode;
-}
-
-/*Will need to change this method, likely will need another prop that is put into DialogueMenu from the pages that use it to send through an onclick method*/
-const changeDialogue = () => {
-    alert('Hello!');
 }
 
 interface DialogueProps{
@@ -21,13 +17,13 @@ function Dialogue(props: DialogueProps){
 }
 
 
-const DialogueBox = ({message}: DialogueBoxProps) => (
+const DialogueBox = ({message, onclick}: DialogueBoxProps) => (
     <div className="dialogue-box">{}
         <div className="dialogue-message">
             <h1> {message}</h1>
         </div>
         <DialogueButton 
-            onClick={changeDialogue}>
+            onClick={onclick}>
         </DialogueButton>
     </div>
 );
