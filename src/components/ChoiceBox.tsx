@@ -14,12 +14,16 @@ type ChoiceProps = {
 
 
 
-const OnAnswerClicked = () => {
-    alert("Correct")
-    
+function OnAnswerClicked() {
+    const a: boolean = true;
+    if (a) {
+        alert("Correct")
+    } else {
+        alert("Incorrect")
+    }
 };
 
-const ChoiceBox = ({ answer1, answer2, answer3  }: ChoiceProps) => (
+const ChoiceBox = ({ answer1, answer2, answer3, answer1correct, answer2correct, answer3correct }: ChoiceProps) => (
     <ul className='choicebox'>
         <li><button className='choicebutton' onClick={OnAnswerClicked}>{answer1}</button></li>
         <li><button className='choicebutton' onClick={OnAnswerClicked}>{answer2}</button></li>
@@ -28,4 +32,4 @@ const ChoiceBox = ({ answer1, answer2, answer3  }: ChoiceProps) => (
 );
 
 
-    export default ChoiceBox
+export default ChoiceBox
