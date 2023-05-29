@@ -1,0 +1,34 @@
+.navigation-page{
+    position: relative;
+    background-color: #f2eace;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation-page-top-container{
+    position: absolute;
+    top: 80px;
+}
+
+.navigation-page-center-container{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: row;
+}
+
+.module-1-card{
+    margin-right: 50px;
+}
+
+.module-2-card{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.module-3-card{
+    margin-left: 50px;
+}
