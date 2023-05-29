@@ -1,0 +1,17 @@
+.choicebox{
+    padding: 12px;
+    background-color: rgb(163, 160, 160);
+    border-radius: 12px;
+    border-color: black;
+    border-width: 2px;
+}
+
+.choicebutton{
+    font-size: large;
+    padding: 6px;
+}
+
+.choicebutton:hover{
+    background-color: #f2eace;
+    border-radius: 3px;
+}
