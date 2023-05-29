@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import SettingsButton from '../components/settings/SettingsButton';
 import './LandingPage.css';
-import ModalContainer from '../components/ModalContainer';
+import ModalContainer from '../components/layouts/ModalContainer';
 import Settings from '../components/settings/Settings';
 
 export default function LandingPage() {
@@ -22,7 +22,10 @@ export default function LandingPage() {
         onClick={toggleSettings}
       />
       <div className="landing-page-center-container">
-        <img src={require('../images/landing-images/title.png')} alt="App Title" />
+        <img
+          src={require('../images/landing-images/title.png')}
+          alt="App Title"
+        />
         <button onClick={handleClick}>- Start -</button>
       </div>
       {isSettingsOpen && (

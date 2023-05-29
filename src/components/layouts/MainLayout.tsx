@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './MainLayout.css';
 import SettingsButton from '../settings/SettingsButton';
-import ModalContainer from '../ModalContainer';
+import ModalContainer from './ModalContainer';
 import Settings from '../settings/Settings';
 
 type MainLayoutProps = {
@@ -24,10 +24,10 @@ const MainLayout = ({ children }: MainLayoutProps) => {
         </ModalContainer>
       )}
       {children}
-      <img
+      {/* <img
         className="mascot-image"
         src={require('../../images/mascot_1.png')}
-      />
+      /> */}
     </div>
   );
 };
