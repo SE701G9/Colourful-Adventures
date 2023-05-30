@@ -1,0 +1,13 @@
+.mixing-box {
+  position: fixed;
+  bottom: 40vh;
+  right: 40vw;
+  width: 20vw;
+  height: 300px;
+  border: 6px solid #533a2f;
+  border-radius: 50px;
+  background-color: #eccf6d;
+  display: flex;
+  padding: 50px;
+  z-index: 0;
+}
