@@ -11,23 +11,36 @@
   background-image: url('../../images/backgrounds/bg_1.1.png');
 }
 
-/* .h1 {
-  font-size: 1em;
-  font-family: 'Jeju Hallasan', cursive;
-} */
-
 .lava-container .dialogue-box {
   border: 6px solid #e7ddd9;
+  height: 240px;
+  padding: 50px 60px;
+  bottom: 2.5vh;
+  right: 2.5vw;
+  width: 95vw;
+}
+
+.lava-container .dialogue-box .dialogue-message h1 {
+  font-family: 'Jeju Hallasan', cursive;
+  font-size: 0.9em;
+}
+
+.lava-container .dialogue-name h1 {
   font-family: 'Jeju Hallasan', cursive;
   font-size: 1em;
 }
 
 .lava-container .dialogue-name {
+  position: fixed;
+  bottom: 210px;
+  left: 20px;
+  width: 300px;
+  height: 100px;
   border: 6px solid #e7ddd9;
+  border-radius: 20px;
+  background-color: #ECCF6D;
+  text-align: center;
+  z-index: 1;
+
   font-family: 'Jeju Hallasan', cursive;
 }
-
-.dialogue-menu {
-  font-size: 1em;
-  font-family: 'Jeju Hallasan', cursive;
-} 
