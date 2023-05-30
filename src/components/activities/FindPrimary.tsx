@@ -39,19 +39,27 @@ const FindPrimary = () => {
 
   /* Use this method to setup the whole dialogue for a page*/
   const setUpDialogue = () => {
-    addDialogue({name: "???", message: "Where... am I?"});
   }
+
+  const [arewWormsVisible, hideWorms] = useState(true);
+  const [areKeysVisible, hideKeys] = useState(true);
+  const [isBlanketVisible, hideBlanket] = useState(true);
 
   const handleWorm = () => {
-    console.log('Red Worm Clicked');
-  }
+    addDialogue({name: "Caramel", message: "Red worms! The way they wiggle is so fresh and tasty!"});
+    addDialogue({name: "Picasso", message: "That’s right! It’s my favourite snack~"})
+    hideWorms(false);
+  };
 
   const handleKey = () => {
-    console.log('Yellow Key Clicked');
+    addDialogue({name: "Caramel", message: "Ooh, some shiny yellow keys~"});
+    addDialogue({name: "Picasso", message: "Are these the keys to my home…?"})
+    hideKeys(false);
   }
 
   const handleBlanket = () => {
-    console.log('Blue Blanket Clicked');
+    addDialogue({name: "Picasso", message: "My blue blanket! Why did I bring my blanket here…"})
+    hideBlanket(false);
   }
   
   const itemWorms = new URL("/src/images/item-images/red_worms.png", import.meta.url)
@@ -67,15 +75,21 @@ const FindPrimary = () => {
             message = {dialogue.message}
             onclick = {changeDialogueData}>
           </DialogueMenu>
-          <button className="redWorm" onClick={handleWorm}>
-            <img src = {String(itemWorms)} />
-          </button>
-          <button className="yellowKeys" onClick={handleKey}>
-            <img src = {String(itemKeys)} />
-          </button>
-          <button className="blueBlanket" onClick={handleBlanket}>
-            <img src = {String(itemBlanket)} />
-          </button>
+            {arewWormsVisible && (
+              <button className="redWorm" onClick={handleWorm}>
+              <img src = {String(itemWorms)} />
+            </button>
+            )}
+            {areKeysVisible && (
+              <button className="yellowKeys" onClick={handleKey}>
+              <img src = {String(itemKeys)} />
+            </button>
+            )}
+            {isBlanketVisible &&(
+              <button className="blueBlanket" onClick={handleBlanket}>
+              <img src = {String(itemBlanket)} />
+            </button>
+            )}
         </main>
       </div>
     </MainLayout>

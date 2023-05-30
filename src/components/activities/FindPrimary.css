@@ -14,7 +14,7 @@
 .redWorm{
   width: 200px;
   height: 50px;
-  position: relative;
+  position: fixed;
   top: 30px;
   left: 80px;
 }
@@ -26,9 +26,9 @@
 .yellowKeys{
   width: 200px;
   height: 50px;
-  position: relative;
+  position: fixed;
   top: 200px;
-  left: 1000px;
+  left: 1300px;
 }
 
 .yellowKeys:hover{
@@ -38,9 +38,9 @@
 .blueBlanket{
   width: 200px;
   height: 50px;
-  position: relative;
+  position: fixed;
   top: 400px;
-  left: 120px;
+  left: 500px;
 }
 
 .blueBlanket:hover{
