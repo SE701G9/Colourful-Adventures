@@ -11,7 +11,12 @@
   background-image: url('../../images/backgrounds/bg_1.1.png');
 }
 
-.dialogue-menu {
+/* .h1 {
+  font-size: 1em;
   font-family: 'Jeju Hallasan', cursive;
+} */
 
-}
+.dialogue-menu {
+  font-size: 1em;
+  font-family: 'Jeju Hallasan', cursive;
+} 

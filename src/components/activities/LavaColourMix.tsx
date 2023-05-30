@@ -1,17 +1,15 @@
 import DialogueMenu from '../dialogue/DialogueMenu';
-import '../dialogue/DialogueBox.css';
 import MainLayout from '../layouts/MainLayout';
 import './LavaColourMix.css';
+import '../dialogue/DialogueBox.css';
+
 import { useState } from 'react'; 
 
 
 const LavaColourMix = () => {
 
-  // TODO: CHANGE DIALOGUE 
   const [dialogue, setDialogue] = useState({name: "Caramel", message: "Okay! Let’s find out where we are now."});
-
-  const handleClick = () => {
-  }
+  // const [isActivityDone, setActivityDone] = useState<boolean>(false); // to hide/show activity and make dialogue/background changes 
 
   type DialogueData = {
     name: string;
@@ -42,8 +40,15 @@ const LavaColourMix = () => {
     }
 
     /* Use this method to setup the whole dialogue for a page*/
+
+    // Post-activity dialogue 
     const setUpDialogue = () => {
-        addDialogue({name: "???", message: "Where... am I?"});
+        addDialogue({name: "Picasso", message: "L-LAVA!? This was here the whole time!?"});
+        addDialogue({name: "Picasso", message: "I… I shouldn’t have mixed red and yellow together."});
+        addDialogue({name: "Picasso", message: "This is…let’s, let’s go back."});
+        addDialogue({name: "Caramel", message: "This just happens to be where we are, silly."});
+        addDialogue({name: "Caramel", message: "Look at how you made orange, with the brightness from red and warmness from yellow! Feel that heat!?"});
+        addDialogue({name: "Picasso", message: " Orange must be a cursed colour…"});
     }
 
   return (
@@ -54,8 +59,6 @@ const LavaColourMix = () => {
             message = {dialogue.message}
             onclick = {changeDialogueData}>
         </DialogueMenu>
-
-
       </main>
     </MainLayout>
   );
