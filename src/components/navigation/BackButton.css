@@ -5,3 +5,8 @@
     top: 50px;
     z-index: 1;
 }
+
+.back-button :hover{
+  color: rgb(84, 84, 84);
+  text-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+}
