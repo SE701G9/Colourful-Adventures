@@ -1,14 +1,12 @@
 .lava-container {
   position: relative;
-  background-color: #f2eace;
   width: 100vw;
   height: 100vh;
   background-size: cover;
-  background-position: center;
   display: flex;
   align-items: center;
-  justify-content: center;
   background-image: url('../../images/backgrounds/bg_1.1.png');
+  justify-content: center;
 }
 
 .lava-container .dialogue-box {
@@ -55,4 +53,14 @@
 
 .lava-container .colour-mix-area .mixed-colours .button-2 {
   grid-area: 1 / 2 / 2 / 3;
+}
+
+.lava-background img {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

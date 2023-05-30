@@ -6,11 +6,10 @@ import OrangeColourButton from "../ColourMixComponents/OrangeColourButton";
 import './LavaColourMix.css';
 import { useState } from 'react'; 
 
-
 const LavaColourMix = () => {
 
   const [dialogue, setDialogue] = useState({name: "Caramel", message: "Okay! Let’s find out where we are now."});
-  // const [isActivityDone, setActivityDone] = useState<boolean>(false); // to hide/show activity and make dialogue/background changes 
+  const [isActivityDone, setActivityDone] = useState<boolean>(false); // to hide/show activity and make dialogue/background changes 
 
   type DialogueData = {
     name: string;
@@ -20,7 +19,7 @@ const LavaColourMix = () => {
   const [dialogueArray, setDialogueArray] = useState<{name: string; message: string}[]>([{name: "Caramel", message: "Try playing around and combining red and yellow, let’s see what happens~"}]);
   const [count, setCount] = useState(0);
   const [isDialogueSet, setIsDialogueSet] = useState<boolean>(false);
-
+  const [areColoursMixed, setColoursMixed] = useState<boolean>(false);
 
   const addDialogue = ({name, message}: DialogueData) => {
     setDialogueArray(dialogueArray => [...dialogueArray,{name,message}])
@@ -50,38 +49,48 @@ const LavaColourMix = () => {
     addDialogue({name: "Picasso", message: "Orange must be a cursed colour…"});
   }
 
-  const [areColoursMixed, setColoursMixed] = useState<boolean>(false);
-
   const mixColours = () => {
     setColoursMixed(true)
+  }
+
+  const markActivityDone = () => {
+    setActivityDone(true);
   }
 
   return (
     <MainLayout>
       <main className="lava-container">
-        <MixingBox />
-        <div className="colour-mix-area" onClick={mixColours}>
+      {!isActivityDone ?
+        <>
+          <MixingBox />
+          <div className="colour-mix-area" onClick={mixColours}>
 
-          {! areColoursMixed ? 
-          <div className="mixing-box grid grid-cols-2 gap-16 grid-rows-1">
-            <div className="button-1 col-span-1">
-              <ColourButton colour="[#F2C029]" />
-            </div>
+          {!areColoursMixed ? 
+            <div className="mixing-box grid grid-cols-2 gap-16 grid-rows-1">
+              <div className="button-1 col-span-1">
+                <ColourButton colour="[#F2C029]" />
+              </div>
 
-            <div className="button-2 col-span-1">
-              <ColourButton colour="[#f22929]" />
-            </div>
-          </div> :
-          <div className="mixing-box">
-            <div className="mixed-colours">
-              <div className="button-2">
-                <ColourButton colour="[#f37b06]" />
+              <div className="button-2 col-span-1">
+                <ColourButton colour="[#f22929]" />
+              </div>
+            </div> :
+            <div className="mixing-box">
+              <div className="mixed-colours">
+                <div className="button-2">
+                  <OrangeColourButton onclick={markActivityDone}/>
+                </div>
               </div>
             </div>
-          </div>
           }
-        </div>
-
+          </div>
+        </>
+          : 
+          <div className='lava-background'>
+            <img src={require('../../images/backgrounds/bg_1.3.1.png')}></img>
+          </div>
+        }
+        
         <DialogueMenu
             name= {dialogue.name}
             message = {dialogue.message}
