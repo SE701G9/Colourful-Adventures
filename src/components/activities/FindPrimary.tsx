@@ -2,9 +2,8 @@ import MainLayout from '../layouts/MainLayout';
 import DialogueMenu from '../dialogue/DialogueMenu';
 import './FindPrimary.css';
 import '../dialogue/DialogueBox.css';
-import { useState } from 'react';
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const FindPrimary = () => {
   type DialogueData = {
@@ -12,6 +11,7 @@ const FindPrimary = () => {
     message: string;
   };
 
+  const navigate = useNavigate();
   const [dialogue, setDialogue] = useState({
     name: 'Narrator',
     message: 'Help the parrot regain his memory!',
@@ -27,6 +27,11 @@ const FindPrimary = () => {
   const [count, setCount] = useState(0);
   const [isDialogueSet, setIsDialogueSet] = useState<boolean>(false);
 
+  const [shouldRedirect, setShouldRedirect] = useState(false);
+  useEffect(() => {
+    console.log(count);
+  }, [count]);
+
   const addDialogue = ({ name, message }: DialogueData) => {
     setDialogueArray((dialogueArray) => [...dialogueArray, { name, message }]);
   };
@@ -41,12 +46,16 @@ const FindPrimary = () => {
       setIsDialogueSet(true);
     }
     const newDialougeData = dialogueArray[count];
-    setDialogue({
-      ...dialogue,
-      name: newDialougeData.name,
-      message: newDialougeData.message,
-    });
-    incrementCount();
+    try {
+      setDialogue({
+        ...dialogue,
+        name: newDialougeData.name,
+        message: newDialougeData.message,
+      });
+      incrementCount();
+    } catch (err) {
+      navigate('/modules/1/remembering-2');
+    }
   };
 
   /* Use this method to setup the whole dialogue for a page*/
