@@ -15,3 +15,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.default {
+  font-family: 'Jeju Hallasan', cursive;
+}
