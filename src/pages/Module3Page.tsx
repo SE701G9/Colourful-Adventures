@@ -1,9 +1,12 @@
+import MainLayout from "../components/layouts/MainLayout";
+import NoStarsPopUp from "../components/rewards/NoStarsPopUp";
 
 
 export default function Module3Page() {
   return (
-    <div>
+    <MainLayout>
       <h1>Third module: Colour Concepts</h1>
-    </div>
+      <NoStarsPopUp/>
+    </MainLayout>
   )
 }

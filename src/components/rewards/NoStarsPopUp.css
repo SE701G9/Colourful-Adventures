@@ -1,0 +1,24 @@
+.reward-layout{
+      position: relative;
+      top:50%;
+      transform: translate(0, -50%);
+      width: 300px;
+      height: 500px;
+      border: 6px solid #533A2F;
+      border-radius: 50px;
+      background-color: #ECCF6D;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 50px 60px;
+      z-index: 0;
+    }  
+
+.reward-layout h1 {
+      font-size: 2.5em;
+      font-family: 'Jeju Hallasan', cursive;
+      position: absolute;
+      top: 30%;
+      right: 0%;
+      text-align: center;
+}
