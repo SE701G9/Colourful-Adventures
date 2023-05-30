@@ -46,7 +46,6 @@ const GrassColourMix = () => {
   // Post-activity dialogue 
   const setUpDialogue = () => {
     addDialogue({name: "Picasso", message: "The fresh air is so calming and relaxing…"});
-    addDialogue({name: "Picasso", message: "I… I shouldn’t have mixed red and yellow together."});
     addDialogue({name: "Caramel", message: "Seems like we’re in a grassland. Blue and yellow are two primary colours, and…"});
     addDialogue({name: "Picasso", message: "They make green, a secondary colour. Right?"});
     addDialogue({name: "Caramel", message: "Exactly!"});
