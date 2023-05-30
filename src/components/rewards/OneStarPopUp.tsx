@@ -1,5 +1,5 @@
 import Stars from "./Stars";
-import './NoStarsPopUp.css';
+import './StarsPopUp.css';
 
 type OneStarPopUpProps = {
       children: React.ReactNode;
