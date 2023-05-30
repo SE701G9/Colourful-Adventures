@@ -1,14 +1,17 @@
-.dialogue-name{
-    position: fixed;
-    bottom: 260px;
-    left: 20px;
-    width: 300px;
-    height: 100px;
-    border: 6px solid #533A2F;
-    border-radius: 20px;
-    background-color: #ECCF6D;
-    font-size: 3em;
-    text-align: center;
-    z-index: 1;
-    font-family: "Times New Roman", 'Times New Roman', Times, serif;
-} 
+.dialogue-name {
+  position: fixed;
+  bottom: 260px;
+  left: 20px;
+  width: 300px;
+  height: 100px;
+  border: 6px solid #533a2f;
+  border-radius: 20px;
+  background-color: #eccf6d;
+  font-size: 3em;
+  text-align: center;
+  z-index: 1;
+}
+
+.dialogue-name h1 {
+  font-family: 'Jeju Hallasan', cursive;
+}
