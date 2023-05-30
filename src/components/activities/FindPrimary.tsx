@@ -1,7 +1,9 @@
 import MainLayout from '../layouts/MainLayout';
 import DialogueMenu from '../dialogue/DialogueMenu';
 import './FindPrimary.css';
-import { useState } from 'react'
+import '../dialogue/DialogueBox.css';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 const FindPrimary = () => {
@@ -54,7 +56,6 @@ const FindPrimary = () => {
   return (
     <MainLayout>
       <main className="find-primary-container">
-        
         <DialogueMenu
           name = {dialogue.name}
           message = {dialogue.message}
