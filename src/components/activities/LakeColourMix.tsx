@@ -1,5 +1,5 @@
-import MainLayout from '../layouts/MainLayout';
-import './LakeColourMix.css';
+import MainLayout from "../layouts/MainLayout";
+import "./LakeColourMix.css";
 
 const LakeColourMix = () => {
   return (

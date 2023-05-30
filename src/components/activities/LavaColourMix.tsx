@@ -1,5 +1,5 @@
-import MainLayout from '../layouts/MainLayout';
-import './LavaColourMix.css';
+import MainLayout from "../layouts/MainLayout";
+import "./LavaColourMix.css";
 
 const LavaColourMix = () => {
   return (
