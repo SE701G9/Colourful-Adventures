@@ -44,3 +44,15 @@
 
   font-family: 'Jeju Hallasan', cursive;
 }
+
+.lava-container .colour-mix-area .mixed-colours {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px; 
+}
+
+.lava-container .colour-mix-area .mixed-colours .button-2 {
+  grid-area: 1 / 2 / 2 / 3;
+}

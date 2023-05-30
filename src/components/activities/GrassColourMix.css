@@ -1,7 +1,46 @@
 .grass-container {
+  position: relative;
+  background-color: #f2eace;
+  width: 100vw;
   height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../../images/backgrounds/bg_1.3.1.png');
 }
 
-.grass-container h1 {
-  font-size: 2em;
+.grass-container .dialogue-box {
+  border: 6px solid #e7ddd9;
+  height: 240px;
+  padding: 50px 60px;
+  bottom: 2.5vh;
+  right: 2.5vw;
+  width: 95vw;
+}
+
+.grass-container .dialogue-box .dialogue-message h1 {
+  font-family: 'Jeju Hallasan', cursive;
+  font-size: 0.9em;
+}
+
+.grass-container .dialogue-name h1 {
+  font-family: 'Jeju Hallasan', cursive;
+  font-size: 1em;
+}
+
+.grass-container .lava-container .dialogue-name {
+  position: fixed;
+  bottom: 210px;
+  left: 20px;
+  width: 300px;
+  height: 100px;
+  border: 6px solid #e7ddd9;
+  border-radius: 20px;
+  background-color: #ECCF6D;
+  text-align: center;
+  z-index: 1;
+
+  font-family: 'Jeju Hallasan', cursive;
 }

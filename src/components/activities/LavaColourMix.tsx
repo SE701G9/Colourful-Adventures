@@ -1,8 +1,9 @@
 import MixingBox from '../ColourMixComponents/MixingBox';
 import DialogueMenu from '../dialogue/DialogueMenu';
 import MainLayout from '../layouts/MainLayout';
+import ColourButton from '../ColourMixComponents/ColourButton';
+import OrangeColourButton from "../ColourMixComponents/OrangeColourButton";
 import './LavaColourMix.css';
-
 import { useState } from 'react'; 
 
 
@@ -39,8 +40,6 @@ const LavaColourMix = () => {
     incrementCount();
   }
 
-  /* Use this method to setup the whole dialogue for a page*/
-
   // Post-activity dialogue 
   const setUpDialogue = () => {
     addDialogue({name: "Picasso", message: "L-LAVA!? This was here the whole time!?"});
@@ -51,10 +50,38 @@ const LavaColourMix = () => {
     addDialogue({name: "Picasso", message: "Orange must be a cursed colour…"});
   }
 
+  const [areColoursMixed, setColoursMixed] = useState<boolean>(false);
+
+  const mixColours = () => {
+    setColoursMixed(true)
+  }
+
   return (
     <MainLayout>
       <main className="lava-container">
         <MixingBox />
+        <div className="colour-mix-area" onClick={mixColours}>
+
+          {! areColoursMixed ? 
+          <div className="mixing-box grid grid-cols-2 gap-16 grid-rows-1">
+            <div className="button-1 col-span-1">
+              <ColourButton colour="[#F2C029]" />
+            </div>
+
+            <div className="button-2 col-span-1">
+              <ColourButton colour="[#f22929]" />
+            </div>
+          </div> :
+          <div className="mixing-box">
+            <div className="mixed-colours">
+              <div className="button-2">
+                <ColourButton colour="[#f37b06]" />
+              </div>
+            </div>
+          </div>
+          }
+        </div>
+
         <DialogueMenu
             name= {dialogue.name}
             message = {dialogue.message}
