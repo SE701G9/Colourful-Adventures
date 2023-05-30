@@ -1,3 +1,7 @@
+.dialogue-menu{
+    font-size: x-small;
+}
+
 .choice-box {
   position: fixed;
   bottom: 320px;
