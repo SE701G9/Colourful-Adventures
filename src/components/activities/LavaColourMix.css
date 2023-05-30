@@ -16,6 +16,17 @@
   font-family: 'Jeju Hallasan', cursive;
 } */
 
+.lava-container .dialogue-box {
+  border: 6px solid #e7ddd9;
+  font-family: 'Jeju Hallasan', cursive;
+  font-size: 1em;
+}
+
+.lava-container .dialogue-name {
+  border: 6px solid #e7ddd9;
+  font-family: 'Jeju Hallasan', cursive;
+}
+
 .dialogue-menu {
   font-size: 1em;
   font-family: 'Jeju Hallasan', cursive;

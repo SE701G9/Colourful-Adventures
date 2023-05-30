@@ -1,7 +1,7 @@
 import DialogueMenu from '../dialogue/DialogueMenu';
 import MainLayout from '../layouts/MainLayout';
 import './LavaColourMix.css';
-import '../dialogue/DialogueBox.css';
+// import '../dialogue/DialogueBox.css';
 
 import { useState } from 'react'; 
 
