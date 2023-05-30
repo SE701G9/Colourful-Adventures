@@ -1,9 +1,4 @@
-import OrangeColourButton from "./OrangeColourButton";
-import "./MixingBox.css";
-import BlueColourButton from "./BlueColourButton";
-import YellowColourButton from "./YellowColourButton";
-import ColourButton from "./ColourButton";
-import { useState } from "react";
+import "./MixingBox.css";;
 
 export default function MixingBox() {
 

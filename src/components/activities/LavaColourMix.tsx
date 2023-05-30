@@ -1,15 +1,19 @@
 import MixingBox from '../ColourMixComponents/MixingBox';
 import DialogueMenu from '../dialogue/DialogueMenu';
 import MainLayout from '../layouts/MainLayout';
-import ColourButton from '../ColourMixComponents/ColourButton';
 import OrangeColourButton from "../ColourMixComponents/OrangeColourButton";
+import RedColourButton from '../ColourMixComponents/RedColourButton';
+import YellowColourButton from '../ColourMixComponents/YellowColourButton';
 import './LavaColourMix.css';
 import { useState } from 'react'; 
+
 
 const LavaColourMix = () => {
 
   const [dialogue, setDialogue] = useState({name: "Caramel", message: "Okay! Let’s find out where we are now."});
   const [isActivityDone, setActivityDone] = useState<boolean>(false); // to hide/show activity and make dialogue/background changes 
+  const [isDialogueSet, setIsDialogueSet] = useState<boolean>(false);
+  const [areColoursMixed, setColoursMixed] = useState<boolean>(false);
 
   type DialogueData = {
     name: string;
@@ -18,8 +22,6 @@ const LavaColourMix = () => {
 
   const [dialogueArray, setDialogueArray] = useState<{name: string; message: string}[]>([{name: "Caramel", message: "Try playing around and combining red and yellow, let’s see what happens~"}]);
   const [count, setCount] = useState(0);
-  const [isDialogueSet, setIsDialogueSet] = useState<boolean>(false);
-  const [areColoursMixed, setColoursMixed] = useState<boolean>(false);
 
   const addDialogue = ({name, message}: DialogueData) => {
     setDialogueArray(dialogueArray => [...dialogueArray,{name,message}])
@@ -47,6 +49,8 @@ const LavaColourMix = () => {
     addDialogue({name: "Caramel", message: "This just happens to be where we are, silly."});
     addDialogue({name: "Caramel", message: "Look at how you made orange, with the brightness from red and warmness from yellow! Feel that heat!?"});
     addDialogue({name: "Picasso", message: "Orange must be a cursed colour…"});
+    addDialogue({name: "Caramel", message: "If we mix primary colours together, they make a new, special colour. These are called secondary colours. "});
+    addDialogue({name: "Caramel", message: "That is why when you mix red and yellow together, it creates a new colour - orange! "});
   }
 
   const mixColours = () => {
@@ -68,11 +72,11 @@ const LavaColourMix = () => {
           {!areColoursMixed ? 
             <div className="mixing-box grid grid-cols-2 gap-16 grid-rows-1">
               <div className="button-1 col-span-1">
-                <ColourButton colour="[#F2C029]" />
+                <YellowColourButton />
               </div>
 
               <div className="button-2 col-span-1">
-                <ColourButton colour="[#f22929]" />
+                <RedColourButton />
               </div>
             </div> :
             <div className="mixing-box">
@@ -94,8 +98,7 @@ const LavaColourMix = () => {
         <DialogueMenu
             name= {dialogue.name}
             message = {dialogue.message}
-            onclick = {changeDialogueData}>
-        </DialogueMenu>
+            onclick = {changeDialogueData} />
       </main>
     </MainLayout>
   );

@@ -22,7 +22,7 @@
 
 .grass-container .dialogue-box .dialogue-message h1 {
   font-family: 'Jeju Hallasan', cursive;
-  font-size: 0.9em;
+  font-size: 3em;
 }
 
 .grass-container .dialogue-name h1 {
@@ -30,7 +30,7 @@
   font-size: 1em;
 }
 
-.grass-container .lava-container .dialogue-name {
+.grass-container .dialogue-name {
   position: fixed;
   bottom: 210px;
   left: 20px;
@@ -43,4 +43,16 @@
   z-index: 1;
 
   font-family: 'Jeju Hallasan', cursive;
+}
+
+.colour-mix-area .mixed-colours {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px; 
+}
+
+.grass-container .colour-mix-area .mixed-colours .button-2 {
+  grid-area: 1 / 2 / 2 / 3;
 }
