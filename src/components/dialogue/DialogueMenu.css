@@ -1,0 +1,30 @@
+.dialogue-menu{
+    font-size: x-small;
+}
+
+.choice-box {
+  position: fixed;
+  bottom: 320px;
+  left: 2.5vw;
+  z-index: 1;
+  width: 600px;
+  padding: 30px 50px 40px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #b5ab8c;
+  border-radius: 10px;
+}
+
+.choice-box li {
+  font-size: 2em;
+  list-style-type: none;
+  padding: 10px 30px;
+  border-radius: 20px;
+  font-family: 'Jeju Hallasan', cursive;
+  cursor: pointer;
+}
+
+.choice-box li:hover {
+  background-color: #f6eac2;
+}
