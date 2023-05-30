@@ -7,6 +7,7 @@ import './NavigationPage.css';
 import Module1Card from '../components/modules/Module1Card';
 import Module2Card from '../components/modules/Module2Card';
 import Module3Card from '../components/modules/Module3Card';
+import BackButton from '../components/navigation/BackButton';
 
 export default function NavigationPage() {
   const navigate = useNavigate();
@@ -14,8 +15,15 @@ export default function NavigationPage() {
 
   const toggleSettings = () => setIsSettingsOpen((prev) => !prev);
 
+  const goBack= () => {
+    navigate('/');
+  };
+
   return (
     <main className="navigation-page">
+      <BackButton
+        onClick={goBack}
+        />
       <SettingsButton
         isSettingsOpen={isSettingsOpen}
         onClick={toggleSettings}
