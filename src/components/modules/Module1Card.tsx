@@ -6,7 +6,6 @@ import Typography from '@mui/material/Typography';
 import CardMedia from '@mui/material/CardMedia';
 import { Link } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
-import { useMediaQuery } from 'react-responsive'
 import './Module1Card.css';
 
   export default function ModuleCard() {
