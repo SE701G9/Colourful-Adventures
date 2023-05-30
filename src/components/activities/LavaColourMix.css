@@ -1,7 +1,17 @@
 .lava-container {
+  position: relative;
+  background-color: #f2eace;
+  width: 100vw;
   height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../../images/backgrounds/bg_1.1.png');
 }
 
-.lava-container h1 {
-  font-size: 2em;
+.dialogue-menu {
+  font-family: 'Jeju Hallasan', cursive;
+
 }

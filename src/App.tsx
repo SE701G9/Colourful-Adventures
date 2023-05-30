@@ -12,6 +12,7 @@ import TeachPrimary from './components/activities/TeachPrimary';
 import LavaColourMix from './components/activities/LavaColourMix';
 import GrassColourMix from './components/activities/GrassColourMix';
 import LakeColourMix from './components/activities/LakeColourMix';
+import SecondaryStory from './pages/SecondaryStory';
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
           <Route path="2" element={<Module2Page />} />
           <Route path="3" element={<Module3Page />} />
         </Route>
+
+        {/* story page placeholder */}
+        <Route path="through-the-lands" element= {<SecondaryStory />} />
 
         <Route path="activities">
           <Route path="find-primary" element={<FindPrimary />} />

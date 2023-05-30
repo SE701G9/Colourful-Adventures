@@ -1,10 +1,11 @@
-// im not sure about the naming of this page,
-// if it's changed just make sure to change it everywhere else
-
 import MainLayout from '../components/layouts/MainLayout';
 import Selections from '../components/selection/Selections';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function ModuleOnePage() {
+  const navigate = useNavigate();
+
   const selections = [
     {
       label: 'Who am I',
@@ -16,7 +17,7 @@ export default function ModuleOnePage() {
     },
     {
       label: 'Through the Lands',
-      onClick: () => console.log('Start of Journey clicked'),
+      onClick: () => { navigate("/through-the-lands") },
     },
   ];
   return (
