@@ -1,7 +1,33 @@
 .lava-container {
+  position: relative;
+  background-color: #f2eace;
+  width: 100vw;
   height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../../images/backgrounds/bg_1.1.png');
 }
 
-.lava-container h1 {
-  font-size: 2em;
+/* .h1 {
+  font-size: 1em;
+  font-family: 'Jeju Hallasan', cursive;
+} */
+
+.lava-container .dialogue-box {
+  border: 6px solid #e7ddd9;
+  font-family: 'Jeju Hallasan', cursive;
+  font-size: 1em;
 }
+
+.lava-container .dialogue-name {
+  border: 6px solid #e7ddd9;
+  font-family: 'Jeju Hallasan', cursive;
+}
+
+.dialogue-menu {
+  font-size: 1em;
+  font-family: 'Jeju Hallasan', cursive;
+} 
