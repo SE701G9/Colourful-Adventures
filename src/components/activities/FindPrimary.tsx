@@ -59,7 +59,12 @@ const FindPrimary = () => {
   };
 
   /* Use this method to setup the whole dialogue for a page*/
-  const setUpDialogue = () => {};
+  const setUpDialogue = () => {
+    addDialogue({
+      name: 'Narrator',
+      message: 'Now, click on the red worms!',
+    });
+  };
 
   const [arewWormsVisible, hideWorms] = useState(true);
   const [areKeysVisible, hideKeys] = useState(true);
@@ -73,6 +78,10 @@ const FindPrimary = () => {
     addDialogue({
       name: 'Picasso',
       message: 'That’s right! It’s my favourite snack~',
+    });
+    addDialogue({
+      name: 'Narrator',
+      message: 'Next, the blue blanket!',
     });
     hideWorms(false);
   };
@@ -90,6 +99,10 @@ const FindPrimary = () => {
     addDialogue({
       name: 'Picasso',
       message: 'My blue blanket! Why did I bring my blanket here…',
+    });
+    addDialogue({
+      name: 'Narrator',
+      message: 'Finally, the yellow keys!',
     });
     hideBlanket(false);
   };
