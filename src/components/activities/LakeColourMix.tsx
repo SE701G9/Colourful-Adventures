@@ -77,6 +77,19 @@ const LakeColourMix = () => {
     addDialogue({ name: 'Picasso', message: 'Zzzz… purple… zzz…' });
   };
 
+  const [redColourActive, setRedColourActive] = useState<boolean>(true);
+  const [blueColourActive, setBlueColourActive] = useState<boolean>(true);
+
+  const redColourClicked = () => {
+    setRedColourActive(false);
+  }
+
+  const blueColourClicked = () => {
+    setBlueColourActive(false);
+    mixColours();
+
+  }
+
   return (
     <MainLayout>
       <main className="lake-container">
