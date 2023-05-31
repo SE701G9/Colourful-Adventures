@@ -58,6 +58,7 @@
 
 .lava-container .colour-mix-area .mixed-colours .prompt-text {
   grid-area: 2 / 1 / 3 / 4;
+  color: #ECCF6D;
 }
 
 .lava-container .colour-mix-area .not-mixed-colours {

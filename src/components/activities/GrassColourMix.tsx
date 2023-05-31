@@ -66,24 +66,42 @@ const GrassColourMix = () => {
     addDialogue({name: "Caramel", message: "Exactly!"});
   }
 
+  const [blueColourActive, setBlueColourActive] = useState<boolean>(true);
+  const [yellowColourActive, setYellowColourActive] = useState<boolean>(true);
+
+  const blueColourClicked = () => {
+    setBlueColourActive(false);
+    mixColours();
+  }
+
+  const yellowColourClicked = () => {
+    setYellowColourActive(false);
+  }
+
   return (
     <MainLayout>
       <main className="grass-container">
       {!isActivityDone ?
         <>
           <MixingBox />
-          <div className="colour-mix-area" onClick={mixColours}>
+          <div className="colour-mix-area">
 
           {!areColoursMixed ? 
             <div className="mixing-box">
               <div className="not-mixed-colours">
-                <div className="button-1">
+              {yellowColourActive ? 
+                <div className="button-1" onClick={yellowColourClicked}>
                   <YellowColourButton />
                 </div>
-
-                <div className="button-2">
-                  <BlueColourButton />
-                </div>
+                : <div className="button-1"> 
+                    <button className="colour-button bg-[#bf9821]"></button>
+                  </div>}
+                { blueColourActive ?
+                  <div className="button-2" onClick={blueColourClicked}>
+                    <BlueColourButton/>
+                  </div> :
+                  <button className="colour-button bg-[#243057]"></button>
+                }
                 <div className="suggestion-text ">
                   <h2>Click on the colour circles and let's see what happen!</h2>
                 </div>

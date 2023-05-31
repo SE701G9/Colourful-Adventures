@@ -72,24 +72,43 @@ const LavaColourMix = () => {
 
   }
 
+  const [redColourActive, setRedColourActive] = useState<boolean>(true);
+  const [yellowColourActive, setYellowColourActive] = useState<boolean>(true);
+
+  const redColourClicked = () => {
+    setRedColourActive(false);
+    mixColours();
+  }
+
+  const yellowColourClicked = () => {
+    setYellowColourActive(false);
+  }
+
   return (
     <MainLayout>
       <main className="lava-container">
       {!isActivityDone ?
         <>
           <MixingBox />
-          <div className="colour-mix-area" onClick={mixColours}>
+          <div className="colour-mix-area">
 
           {!areColoursMixed ? 
             <div className="mixing-box">
               <div className="not-mixed-colours">
-                <div className="button-1">
+
+                {yellowColourActive ? 
+                <div className="button-1" onClick={yellowColourClicked}>
                   <YellowColourButton />
                 </div>
-
-                <div className="button-2">
+                : <div className="button-1"> 
+                    <button className="colour-button bg-[#bf9821]"></button>
+                  </div>}
+                {redColourActive ? 
+                <div className="button-2" onClick={redColourClicked}>
                   <RedColourButton />
                 </div>
+                : <></>
+                }
                 <div className="suggestion-text ">
                   <h2>Click on the colour circles and let's see what happen!</h2>
                 </div>

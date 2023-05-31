@@ -57,6 +57,8 @@
 
 .colour-mix-area .mixed-colours .prompt-text {
   grid-area: 2 / 1 / 3 / 4;
+  color: #ECCF6D;
+
 }
 
 .grass-container .colour-mix-area .not-mixed-colours {
@@ -77,6 +79,8 @@
 
 .grass-container .colour-mix-area .not-mixed-colours .suggestion-text {
   grid-area: 2 / 1 / 3 / 3;
+  color: #ECCF6D;
+
 }
 
 .grass-background {

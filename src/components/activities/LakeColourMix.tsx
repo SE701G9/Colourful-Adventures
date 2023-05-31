@@ -64,6 +64,19 @@ const LakeColourMix = () => {
     addDialogue({name: "Picasso", message: "Zzzz… purple… zzz…"});
   }
 
+  const [redColourActive, setRedColourActive] = useState<boolean>(true);
+  const [blueColourActive, setBlueColourActive] = useState<boolean>(true);
+
+  const redColourClicked = () => {
+    setRedColourActive(false);
+  }
+
+  const blueColourClicked = () => {
+    setBlueColourActive(false);
+    mixColours();
+
+  }
+
 
   return (
     <MainLayout>
@@ -71,18 +84,26 @@ const LakeColourMix = () => {
       {!isActivityDone ?
         <>
           <MixingBox />
-          <div className="colour-mix-area" onClick={mixColours}>
+          <div className="colour-mix-area">
 
           {!areColoursMixed ? 
             <div className="mixing-box">
               <div className="not-mixed-colours">
-                <div className="button-1">
+              {redColourActive ? 
+                <div className="button-1" onClick={redColourClicked}>
                   <RedColourButton />
                 </div>
+                : <div className="button-1"> 
+                  <button className="colour-button bg-[#961b1b]"></button>
+                  </div>
+                }
 
-                <div className="button-2">
-                  <BlueColourButton />
-                </div>
+                { blueColourActive ?
+                  <div className="button-2" onClick={blueColourClicked}>
+                    <BlueColourButton/>
+                  </div> :
+                  <button className="colour-button bg-[#243057]"></button>
+                }
                 <div className="suggestion-text ">
                   <h2>Click on the colour circles and let's see what happen!</h2>
                 </div>
@@ -93,9 +114,7 @@ const LakeColourMix = () => {
                 <div className="button-2">
                   <PurpleColourButton onclick={markActivityDone}/>
                 </div>
-                <div className="prompt-text">
-                  <h2>Click on the button to reveal where you are!</h2>
-                </div>
+          
               </div>
             </div>
           }
