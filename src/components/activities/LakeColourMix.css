@@ -63,6 +63,26 @@
   grid-area: 2 / 1 / 3 / 4;
 }
 
+.colour-mix-area .not-mixed-colours {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 16px; 
+}
+
+.colour-mix-area .not-mixed-colours .button-1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.colour-mix-area .not-mixed-colours .button-2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.colour-mix-area .not-mixed-colours .suggestion-text {
+  grid-area: 2 / 1 / 3 / 3;
+}
+
 .lake-background {
   position: relative;
   width: 100vw;
