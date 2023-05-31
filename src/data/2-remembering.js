@@ -238,7 +238,7 @@ export const rememberingScreens2 = [
     nextPage: 24,
   },
   {
-    page: 3,
+    page: 24,
     speaker: 'Caramel',
     script:
       'Don’t worry, Picasso - you have all the primary colours: red, yellow and blue, for your journey! Caramel will help get you home.',
