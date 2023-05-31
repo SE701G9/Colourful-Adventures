@@ -79,12 +79,12 @@ const FindPrimary = () => {
       message: 'Red worms! The way they wiggle is so fresh and tasty!',
     });
     addDialogue({
-      name: 'Picasso',
+      name: '???',
       message: 'That’s right! It’s my favourite snack~',
     });
     addDialogue({
       name: 'Narrator',
-      message: 'You helped Picasso regain his red feathers!',
+      message: 'You helped the parrot regain his red feathers!',
     });
     addDialogue({
       name: 'Narrator',
@@ -95,14 +95,16 @@ const FindPrimary = () => {
   };
 
   const handleKey = () => {
-    addDialogue({ name: 'Caramel', message: 'Ooh, some shiny yellow keys~' });
+    addDialogue({ 
+      name: 'Caramel', 
+      message: 'Ooh, some shiny yellow keys~' });
     addDialogue({
-      name: 'Picasso',
+      name: '???',
       message: 'Are these the keys to my home…?',
     });
     addDialogue({
       name: 'Narrator',
-      message: 'Picasso has regained all his colors!',
+      message: 'The parrot has regained all his colors!',
     });
     hideKeys(false);
     hidePicassoC(false);
@@ -110,12 +112,12 @@ const FindPrimary = () => {
 
   const handleBlanket = () => {
     addDialogue({
-      name: 'Picasso',
+      name: '???',
       message: 'My blue blanket! Why did I bring my blanket here…',
     });
     addDialogue({
       name: 'Narrator',
-      message: 'Once agian, you helped Picasso reagin his color!',
+      message: 'Once agian, you helped the parrot reagin his color!',
     });
     addDialogue({
       name: 'Narrator',
