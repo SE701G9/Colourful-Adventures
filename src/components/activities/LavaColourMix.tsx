@@ -84,6 +84,9 @@ const LavaColourMix = () => {
                 <div className="button-2">
                   <OrangeColourButton onclick={markActivityDone}/>
                 </div>
+                <div className="prompt-text">
+                  <h2>Click on the button to reveal where you are!</h2>
+                </div>
               </div>
             </div>
           }
@@ -91,7 +94,6 @@ const LavaColourMix = () => {
         </>
           : 
           <div className='lava-background'>
-            <img src={require('../../images/backgrounds/bg_1.3.1.png')}></img>
           </div>
         }
         

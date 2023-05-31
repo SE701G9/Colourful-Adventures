@@ -10,8 +10,7 @@ import GreenColourButton from '../ColourMixComponents/GreenColourButton';
 
 const GrassColourMix = () => {
   const [dialogue, setDialogue] = useState({name: "", message: "Play around with the colours blue and yellow to help Picasso and Caramel get to the next place!"});
-  // const [isActivityDone, setActivityDone] = useState<boolean>(false); // to hide/show activity and make dialogue/background changes 
-
+  
   type DialogueData = {
     name: string;
     message: string;
@@ -20,10 +19,8 @@ const GrassColourMix = () => {
   const [dialogueArray, setDialogueArray] = useState<{name: string; message: string}[]>([{name: "Picasso", message: " Whoa! This place is SO much better than the lava!"}]);
   const [count, setCount] = useState(0);
   const [isDialogueSet, setIsDialogueSet] = useState<boolean>(false);
-  const [isActivityDone, setActivityDone] = useState<boolean>(false); // to hide/show activity and make dialogue/background changes 
+  const [isActivityDone, setActivityDone] = useState<boolean>(false);
   const [areColoursMixed, setColoursMixed] = useState<boolean>(false);
-  
-
 
   const addDialogue = ({name, message}: DialogueData) => {
     setDialogueArray(dialogueArray => [...dialogueArray,{name,message}])
@@ -50,8 +47,6 @@ const GrassColourMix = () => {
     addDialogue({name: "Picasso", message: "They make green, a secondary colour. Right?"});
     addDialogue({name: "Caramel", message: "Exactly!"});
   }
-
-
 
   const mixColours = () => {
     setColoursMixed(true)
@@ -84,14 +79,16 @@ const GrassColourMix = () => {
                 <div className="button-2">
                   <GreenColourButton onclick={markActivityDone}/>
                 </div>
+                <div className="prompt-text">
+                  <h2>Click on the button to reveal where you are!</h2>
+                </div>
               </div>
             </div>
           }
           </div>
         </>
           : 
-          <div className='lava-background'>
-            <img src={require('../../images/backgrounds/bg_1.3.2.png')}></img>
+          <div className='grass-background'>
           </div>
         }
         <DialogueMenu
