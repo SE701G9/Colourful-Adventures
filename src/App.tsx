@@ -16,7 +16,6 @@ import { whoAmIScreens } from './data/1-who-am-i';
 import {
   rememberingScreens1,
   rememberingScreens2,
-  rememberingScreens3,
 } from './data/2-remembering';
 import {
   landScreens1,
@@ -42,10 +41,6 @@ function App() {
             <Route
               path="remembering-2"
               element={<Talk screens={rememberingScreens2} />}
-            />
-            <Route
-              path="remembering-3"
-              element={<Talk screens={rememberingScreens3} />}
             />
             <Route path="land-1" element={<Talk screens={landScreens1} />} />
             <Route path="land-2" element={<Talk screens={landScreens2} />} />

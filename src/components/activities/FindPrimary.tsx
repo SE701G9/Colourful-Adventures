@@ -69,6 +69,9 @@ const FindPrimary = () => {
   const [arewWormsVisible, hideWorms] = useState(true);
   const [areKeysVisible, hideKeys] = useState(true);
   const [isBlanketVisible, hideBlanket] = useState(true);
+  const [isPicassoNGVisible, hidePicassoNG] = useState(true);
+  const [isPicassoHRVisible, hidePicassoHR] = useState(true);
+  const [isPicassoCBRVisible, hidePicassoC] = useState(true);
 
   const handleWorm = () => {
     addDialogue({
@@ -76,35 +79,52 @@ const FindPrimary = () => {
       message: 'Red worms! The way they wiggle is so fresh and tasty!',
     });
     addDialogue({
-      name: 'Picasso',
+      name: '???',
       message: 'That’s right! It’s my favourite snack~',
+    });
+    addDialogue({
+      name: 'Narrator',
+      message: 'You helped the parrot regain his red feathers!',
     });
     addDialogue({
       name: 'Narrator',
       message: 'Next, the blue blanket!',
     });
     hideWorms(false);
+    hidePicassoNG(false);
   };
 
   const handleKey = () => {
-    addDialogue({ name: 'Caramel', message: 'Ooh, some shiny yellow keys~' });
+    addDialogue({ 
+      name: 'Caramel', 
+      message: 'Ooh, some shiny yellow keys~' });
     addDialogue({
-      name: 'Picasso',
+      name: '???',
       message: 'Are these the keys to my home…?',
     });
+    addDialogue({
+      name: 'Narrator',
+      message: 'The parrot has regained all his colors!',
+    });
     hideKeys(false);
+    hidePicassoC(false);
   };
 
   const handleBlanket = () => {
     addDialogue({
-      name: 'Picasso',
+      name: '???',
       message: 'My blue blanket! Why did I bring my blanket here…',
+    });
+    addDialogue({
+      name: 'Narrator',
+      message: 'Once agian, you helped the parrot reagin his color!',
     });
     addDialogue({
       name: 'Narrator',
       message: 'Finally, the yellow keys!',
     });
     hideBlanket(false);
+    hidePicassoHR(false);
   };
 
   const itemWorms = new URL(
@@ -119,6 +139,27 @@ const FindPrimary = () => {
     '/src/images/item-images/blue_blanket.png',
     import.meta.url
   );
+  const picassoNeutralGray = new URL(
+    '/src/images/character-images/picasso/Picasso-Neutral-Gray.png',
+    import.meta.url
+  )
+  const picassoHeartRed = new URL(
+    '/src/images/character-images/picasso/Picasso-Heart-Red.png',
+    import.meta.url
+  )
+  const picassoConfusedBlueRed = new URL(
+    '/src/images/character-images/picasso/Picasso-Confused-BlueRed.png',
+    import.meta.url
+  )
+  const picassoConfused = new URL(
+    '/src/images/character-images/picasso/Picasso-Confused.png',
+    import.meta.url
+  )
+  const caramelNeutral = new URL(
+    '/src/images/character-images/caramel/Caramel-Neutral.png',
+    import.meta.url
+  )
+
 
   return (
     <MainLayout>
@@ -129,7 +170,6 @@ const FindPrimary = () => {
             message={dialogue.message}
             onclick={changeDialogueData}
           />
-
           {arewWormsVisible && (
             <button className="redWorm" onClick={handleWorm}>
               <img src={String(itemWorms)} />
@@ -145,6 +185,27 @@ const FindPrimary = () => {
               <img src={String(itemBlanket)} />
             </button>
           )}
+          <div className='caramel'>
+              <img src={String(caramelNeutral)}/>
+          </div>
+          <div className="picassoRed">
+            {isPicassoHRVisible &&
+              <img src={String(picassoHeartRed)}/>
+            }
+          </div>
+          <div className="picassoGray">
+            {isPicassoNGVisible &&
+              <img src={String(picassoNeutralGray)}/>
+            }
+          </div>
+          <div className="picassoBlue">
+            {isPicassoCBRVisible &&
+              <img src={String(picassoConfusedBlueRed)}/>
+            }
+          </div>
+          <div className="picassoYellow">
+            <img src={String(picassoConfused)}/>
+          </div>
         </main>
       </div>
     </MainLayout>
