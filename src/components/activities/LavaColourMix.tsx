@@ -6,6 +6,7 @@ import RedColourButton from '../ColourMixComponents/RedColourButton';
 import YellowColourButton from '../ColourMixComponents/YellowColourButton';
 import './LavaColourMix.css';
 import { useState } from 'react'; 
+import { useNavigate } from 'react-router-dom';
 
 
 const LavaColourMix = () => {
@@ -14,6 +15,7 @@ const LavaColourMix = () => {
   const [isActivityDone, setActivityDone] = useState<boolean>(false); // to hide/show activity and make dialogue/background changes 
   const [isDialogueSet, setIsDialogueSet] = useState<boolean>(false);
   const [areColoursMixed, setColoursMixed] = useState<boolean>(false);
+  const navigate = useNavigate();
 
   type DialogueData = {
     name: string;
@@ -37,8 +39,13 @@ const LavaColourMix = () => {
         setIsDialogueSet(true);
     }
     const newDialougeData = dialogueArray[count];
-    setDialogue({...dialogue, name: newDialougeData.name, message: newDialougeData.message});
-    incrementCount();
+    try {
+      setDialogue({...dialogue, name: newDialougeData.name, message: newDialougeData.message});
+      incrementCount();
+    } catch (err) {
+      navigate('/activities/colour-mix-grass')
+    }
+    
   }
 
   // Post-activity dialogue 

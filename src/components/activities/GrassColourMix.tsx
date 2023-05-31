@@ -6,6 +6,7 @@ import { useState } from 'react';
 import BlueColourButton from '../ColourMixComponents/BlueColourButton';
 import YellowColourButton from '../ColourMixComponents/YellowColourButton';
 import GreenColourButton from '../ColourMixComponents/GreenColourButton';
+import { useNavigate } from 'react-router-dom';
 
 
 const GrassColourMix = () => {
@@ -21,6 +22,7 @@ const GrassColourMix = () => {
   const [isDialogueSet, setIsDialogueSet] = useState<boolean>(false);
   const [isActivityDone, setActivityDone] = useState<boolean>(false);
   const [areColoursMixed, setColoursMixed] = useState<boolean>(false);
+  const navigate = useNavigate();
 
   const addDialogue = ({name, message}: DialogueData) => {
     setDialogueArray(dialogueArray => [...dialogueArray,{name,message}])
@@ -36,8 +38,12 @@ const GrassColourMix = () => {
         setIsDialogueSet(true);
     }
     const newDialougeData = dialogueArray[count];
-    setDialogue({...dialogue, name: newDialougeData.name, message: newDialougeData.message});
-    incrementCount();
+    try {
+      setDialogue({...dialogue, name: newDialougeData.name, message: newDialougeData.message});
+      incrementCount();
+    } catch (err) {
+      navigate('/activities/colour-mix-lake');
+    }
   }
 
   // Post-activity dialogue 

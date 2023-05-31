@@ -6,6 +6,7 @@ import RedColourButton from '../ColourMixComponents/RedColourButton';
 import "./LakeColourMix.css";
 import { PureComponent, useState } from 'react'; 
 import PurpleColourButton from "../ColourMixComponents/PurpleColourButton";
+import { useNavigate } from "react-router-dom";
 
 
 const LakeColourMix = () => {
@@ -21,6 +22,7 @@ const LakeColourMix = () => {
   const [isDialogueSet, setIsDialogueSet] = useState<boolean>(false);
   const [isActivityDone, setActivityDone] = useState<boolean>(false);
   const [areColoursMixed, setColoursMixed] = useState<boolean>(false);
+  const navigate = useNavigate();
 
   const addDialogue = ({name, message}: DialogueData) => {
     setDialogueArray(dialogueArray => [...dialogueArray,{name,message}])
@@ -36,8 +38,12 @@ const LakeColourMix = () => {
         setIsDialogueSet(true);
     }
     const newDialougeData = dialogueArray[count];
-    setDialogue({...dialogue, name: newDialougeData.name, message: newDialougeData.message});
-    incrementCount();
+    try {
+      setDialogue({...dialogue, name: newDialougeData.name, message: newDialougeData.message});
+      incrementCount();
+    } catch (err) {
+      navigate('/modules/1')
+    }
   }
 
   // Post-activity dialogue 
