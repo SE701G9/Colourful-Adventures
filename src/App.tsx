@@ -18,6 +18,7 @@ import {
   landScreens1,
   landScreens2,
   landScreens3,
+  landScreens4,
 } from './data/3-through-land';
 
 function App() {
@@ -67,6 +68,10 @@ function App() {
             <Route
               path="land-3"
               element={<Talk screens={landScreens3} isGrey={false} />}
+            />
+            <Route
+              path="land-4"
+              element={<Talk screens={landScreens4} isGrey={false} />}
             />
           </Route>
           <Route path="2" element={<Module2Page />} />
