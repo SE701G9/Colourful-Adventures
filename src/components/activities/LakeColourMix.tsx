@@ -1,82 +1,81 @@
-import MainLayout from "../layouts/MainLayout";
+import MainLayout from '../layouts/MainLayout';
 import MixingBox from '../ColourMixComponents/MixingBox';
 import DialogueMenu from '../dialogue/DialogueMenu';
 import BlueColourButton from '../ColourMixComponents/BlueColourButton';
 import RedColourButton from '../ColourMixComponents/RedColourButton';
-import "./LakeColourMix.css";
-import { PureComponent, useState } from 'react'; 
-import PurpleColourButton from "../ColourMixComponents/PurpleColourButton";
-import { useNavigate } from "react-router-dom";
-
+import './LakeColourMix.css';
+import { PureComponent, useState } from 'react';
+import PurpleColourButton from '../ColourMixComponents/PurpleColourButton';
+import { useNavigate } from 'react-router-dom';
 
 const LakeColourMix = () => {
-
   type DialogueData = {
     name: string;
     message: string;
-  }
+  };
 
-  const [dialogue, setDialogue] = useState({name: "", message: "Mix red and blue to see where Picasso and Caramel will be resting."});
-  const [dialogueArray, setDialogueArray] = useState<{name: string; message: string}[]>([]);
+  const [dialogue, setDialogue] = useState({
+    name: '',
+    message:
+      'Mix red and blue to see where Picasso and Caramel will be resting.',
+  });
+  const [dialogueArray, setDialogueArray] = useState<
+    { name: string; message: string }[]
+  >([]);
   const [count, setCount] = useState(0);
   const [isDialogueSet, setIsDialogueSet] = useState<boolean>(false);
   const [isActivityDone, setActivityDone] = useState<boolean>(false);
   const [areColoursMixed, setColoursMixed] = useState<boolean>(false);
   const navigate = useNavigate();
 
-  const addDialogue = ({name, message}: DialogueData) => {
-    setDialogueArray(dialogueArray => [...dialogueArray,{name,message}])
-  }
+  const addDialogue = ({ name, message }: DialogueData) => {
+    setDialogueArray((dialogueArray) => [...dialogueArray, { name, message }]);
+  };
 
   const incrementCount = () => {
-    setCount(count => count + 1);
-  }
+    setCount((count) => count + 1);
+  };
 
   const changeDialogueData = () => {
-    if(!isDialogueSet){
-        setUpDialogue();
-        setIsDialogueSet(true);
+    if (!isDialogueSet) {
+      setUpDialogue();
+      setIsDialogueSet(true);
     }
     const newDialougeData = dialogueArray[count];
     try {
-      setDialogue({...dialogue, name: newDialougeData.name, message: newDialougeData.message});
+      setDialogue({
+        ...dialogue,
+        name: newDialougeData.name,
+        message: newDialougeData.message,
+      });
       incrementCount();
     } catch (err) {
       if (isActivityDone) {
-        navigate('/modules/1')
+        navigate('/modules/1/land-4');
       }
     }
-  }
+  };
 
-  const setUpDialogue = () => {
-    
-  }
+  const setUpDialogue = () => {};
 
   const mixColours = () => {
-    setColoursMixed(true)
-  }
+    setColoursMixed(true);
+  };
 
   const markActivityDone = () => {
     setActivityDone(true);
-    setDialogue({name: "Picasso", message: "We got purple from mixing red and blue."});
-    addDialogue({name: "Caramel", message: "A romantic night by the lake~"});
-    addDialogue({name: "Caramel", message: "The reflection of the sky on the lake made the water look purple, too! Isn’t that amazi-"});
-    addDialogue({name: "Picasso", message: "Zzzz… purple… zzz…"});
-  }
-
-  const [redColourActive, setRedColourActive] = useState<boolean>(true);
-  const [blueColourActive, setBlueColourActive] = useState<boolean>(true);
-
-  const redColourClicked = () => {
-    setRedColourActive(false);
-  }
-
-  const blueColourClicked = () => {
-    setBlueColourActive(false);
-    mixColours();
-
-  }
-
+    setDialogue({
+      name: 'Picasso',
+      message: 'We got purple from mixing red and blue.',
+    });
+    addDialogue({ name: 'Caramel', message: 'A romantic night by the lake~' });
+    addDialogue({
+      name: 'Caramel',
+      message:
+        'The reflection of the sky on the lake made the water look purple, too! Isn’t that amazi-',
+    });
+    addDialogue({ name: 'Picasso', message: 'Zzzz… purple… zzz…' });
+  };
 
   return (
     <MainLayout>
@@ -125,9 +124,10 @@ const LakeColourMix = () => {
           </div>
         }
         <DialogueMenu
-            name= {dialogue.name}
-            message = {dialogue.message}
-            onclick = {changeDialogueData} />
+          name={dialogue.name}
+          message={dialogue.message}
+          onclick={changeDialogueData}
+        />
       </main>
     </MainLayout>
   );

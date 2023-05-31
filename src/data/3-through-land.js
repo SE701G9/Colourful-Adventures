@@ -106,3 +106,38 @@ export const landScreens3 = [
     forcedUrl: '/activities/colour-mix-lake',
   },
 ];
+
+export const landScreens4 = [
+  {
+    page: 1,
+    speaker: 'Narrator',
+    script:
+      'Picasso has learnt the secondary colours now after the primary colours.',
+    nextPage: 2,
+  },
+  {
+    page: 2,
+    speaker: 'Narrator',
+    script: 'We have completed the basic colour wheel.',
+    nextPage: 3,
+  },
+  {
+    page: 3,
+    speaker: 'Narrator',
+    script: 'However, this is not the end of Picasso’s journey.',
+    nextPage: 4,
+  },
+  {
+    page: 4,
+    speaker: 'Narrator',
+    script: 'Coming up next on … Colourful Adventures …',
+    nextPage: 5,
+  },
+  {
+    page: 5,
+    speaker: 'Narrator',
+    script: 'Picasso must brave the terrors of the advanced tertiary colours.',
+    nextPage: null,
+    forcedUrl: '/modules/1',
+  },
+];
