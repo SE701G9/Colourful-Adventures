@@ -1,12 +1,12 @@
 .settings-button {
   position: fixed;
   z-index: 100;
-  top: 50px;
-  right: 50px;
+  top: 60px;
+  right: 60px;
   font-size: 3.5em;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #00e6e6,
     0 0 80px #00e6e6, 0 0 90px #00e6e6, 0 0 100px #00e6e6, 0 0 150px #00e6e6;
-  color: black;
+  color: #331708;
   transition: 0.1s all;
 }
 
