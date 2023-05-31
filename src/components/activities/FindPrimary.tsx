@@ -4,6 +4,7 @@ import './FindPrimary.css';
 import '../dialogue/DialogueBox.css';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import zIndex from '@mui/material/styles/zIndex';
 
 const FindPrimary = () => {
   type DialogueData = {
@@ -187,6 +188,12 @@ const FindPrimary = () => {
           )}
           <div className='caramel'>
               <img 
+              style={{
+                position: 'fixed',
+                left: '40px',
+                bottom: '260px',
+                width: '300px',
+              }}
               src={String(caramelNeutral)}/>
           </div>
           <div className="picassoRed">

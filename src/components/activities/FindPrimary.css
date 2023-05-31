@@ -44,11 +44,10 @@
 }
 
 .caramel{
-  position: fixed;
-  z-index: 2;
-  width: 220px;
-  left: 100px;
-  top: 220px;
+  position: 'fixed';
+  left: '40px';
+  bottom: '260px';
+  width: '300px';
 }
 
 .picassoGray{

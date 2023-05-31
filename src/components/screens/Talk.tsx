@@ -37,10 +37,11 @@ const Talk = ({ screens, isGrey, isDarkBg }: any) => {
         <img
           style={{
             position: 'fixed',
-            right: 0,
-            bottom: '20px',
+            right: '30px',
+            bottom: '260px',
+            width: '300px',
           }}
-          src={require('../../images/avatar.png')}
+          src={require('../../images/character-images/picasso/Picasso-Neutral.png')}
         />
       ) : (
         <img

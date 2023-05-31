@@ -90,6 +90,16 @@ const LakeColourMix = () => {
 
   }
 
+  const caramel = new URL(
+    '/src/images/character-images/caramel/Caramel-Neutral.png',
+    import.meta.url
+  )
+
+  const picasso = new URL(
+    '/src/images/character-images/picasso/Picasso-Neutral.png',
+    import.meta.url
+  )
+
   return (
     <MainLayout>
       <main className="lake-container">
@@ -136,6 +146,26 @@ const LakeColourMix = () => {
           <div className='lake-background'>
           </div>
         }
+        <div className='caramel'>
+            <img
+            style={{
+              position: 'fixed',
+              left: '40px',
+              bottom: '260px',
+              width: '300px',
+            }}
+            src={String(caramel)}/>
+        </div>
+        <div className='picasso'>
+            <img
+            style={{
+              position: 'fixed',
+              right: '30px',
+              bottom: '260px',
+              width: '300px',
+            }}
+            src={String(picasso)}/>
+        </div>
         <DialogueMenu
           name={dialogue.name}
           message={dialogue.message}
