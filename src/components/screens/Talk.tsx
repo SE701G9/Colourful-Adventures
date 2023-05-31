@@ -24,6 +24,15 @@ const Talk = ({ screens }: any) => {
 
   return (
     <MainLayout>
+      <img
+        style={{
+          position: 'fixed',
+          right: 0,
+          bottom: '20px',
+          height: '1000px',
+        }}
+        src={require('../../images/avatar.png')}
+      />
       {currentPageInfo && (
         <DialogueMenu
           name={currentPageInfo.speaker}
