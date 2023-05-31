@@ -77,13 +77,18 @@ const LavaColourMix = () => {
           <div className="colour-mix-area" onClick={mixColours}>
 
           {!areColoursMixed ? 
-            <div className="mixing-box grid grid-cols-2 gap-16 grid-rows-1">
-              <div className="button-1 col-span-1">
-                <YellowColourButton />
-              </div>
+            <div className="mixing-box">
+              <div className="not-mixed-colours">
+                <div className="button-1">
+                  <YellowColourButton />
+                </div>
 
-              <div className="button-2 col-span-1">
-                <RedColourButton />
+                <div className="button-2">
+                  <RedColourButton />
+                </div>
+                <div className="suggestion-text ">
+                  <h2>Click on the colour circles and let's see what happen!</h2>
+                </div>
               </div>
             </div> :
             <div className="mixing-box">
