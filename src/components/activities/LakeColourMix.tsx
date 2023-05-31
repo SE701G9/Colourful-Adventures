@@ -17,7 +17,7 @@ const LakeColourMix = () => {
   }
 
   const [dialogue, setDialogue] = useState({name: "", message: "Mix red and blue to see where Picasso and Caramel will be resting."});
-  const [dialogueArray, setDialogueArray] = useState<{name: string; message: string}[]>([{name: "Picasso", message: "Wow… This is wonderful!"}]);
+  const [dialogueArray, setDialogueArray] = useState<{name: string; message: string}[]>([]);
   const [count, setCount] = useState(0);
   const [isDialogueSet, setIsDialogueSet] = useState<boolean>(false);
   const [isActivityDone, setActivityDone] = useState<boolean>(false);
@@ -42,16 +42,14 @@ const LakeColourMix = () => {
       setDialogue({...dialogue, name: newDialougeData.name, message: newDialougeData.message});
       incrementCount();
     } catch (err) {
-      navigate('/modules/1')
+      if (isActivityDone) {
+        navigate('/modules/1')
+      }
     }
   }
 
-  // Post-activity dialogue 
   const setUpDialogue = () => {
-    addDialogue({name: "Picasso", message: "We got purple from mixing red and blue."});
-    addDialogue({name: "Caramel", message: "A romantic night by the lake~"});
-    addDialogue({name: "Caramel", message: "The reflection of the sky on the lake made the water look purple, too! Isn’t that amazi-"});
-    addDialogue({name: "Picasso", message: "Zzzz… purple… zzz…"});
+    
   }
 
   const mixColours = () => {
@@ -60,6 +58,10 @@ const LakeColourMix = () => {
 
   const markActivityDone = () => {
     setActivityDone(true);
+    setDialogue({name: "Picasso", message: "We got purple from mixing red and blue."});
+    addDialogue({name: "Caramel", message: "A romantic night by the lake~"});
+    addDialogue({name: "Caramel", message: "The reflection of the sky on the lake made the water look purple, too! Isn’t that amazi-"});
+    addDialogue({name: "Picasso", message: "Zzzz… purple… zzz…"});
   }
 
 

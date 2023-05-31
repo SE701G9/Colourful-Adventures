@@ -43,21 +43,16 @@ const LavaColourMix = () => {
       setDialogue({...dialogue, name: newDialougeData.name, message: newDialougeData.message});
       incrementCount();
     } catch (err) {
-      navigate('/activities/colour-mix-grass')
+      if (isActivityDone) {
+        navigate('/activities/colour-mix-grass')
+      }
     }
     
   }
 
-  // Post-activity dialogue 
   const setUpDialogue = () => {
-    addDialogue({name: "Picasso", message: "L-LAVA!? This was here the whole time!?"});
-    addDialogue({name: "Picasso", message: "I… I shouldn’t have mixed red and yellow together."});
-    addDialogue({name: "Picasso", message: "This is…let’s, let’s go back."});
-    addDialogue({name: "Caramel", message: "This just happens to be where we are, silly."});
-    addDialogue({name: "Caramel", message: "Look at how you made orange, with the brightness from red and warmness from yellow! Feel that heat!?"});
-    addDialogue({name: "Picasso", message: "Orange must be a cursed colour…"});
-    addDialogue({name: "Caramel", message: "If we mix primary colours together, they make a new, special colour. These are called secondary colours. "});
-    addDialogue({name: "Caramel", message: "That is why when you mix red and yellow together, it creates a new colour - orange! "});
+
+    // addDialogue({name: "Caramel", message: "Try playing around and combining red and yellow, let’s see what happens~"});
   }
 
   const mixColours = () => {
@@ -65,7 +60,16 @@ const LavaColourMix = () => {
   }
 
   const markActivityDone = () => {
+    setDialogue({name: "Picasso", message: "L-LAVA!? This was here the whole time!?"});
+    addDialogue({name: "Picasso", message: "I… I shouldn’t have mixed red and yellow together."});
+    addDialogue({name: "Picasso", message: "This is…let’s, let’s go back."});
+    addDialogue({name: "Caramel", message: "This just happens to be where we are, silly."});
+    addDialogue({name: "Caramel", message: "Look at how you made orange, with the brightness from red and warmness from yellow! Feel that heat!?"});
+    addDialogue({name: "Picasso", message: "Orange must be a cursed colour…"});
+    addDialogue({name: "Caramel", message: "If we mix primary colours together, they make a new, special colour. These are called secondary colours. "});
+    addDialogue({name: "Caramel", message: "That is why when you mix red and yellow together, it creates a new colour - orange! "});
     setActivityDone(true);
+
   }
 
   return (

@@ -10,14 +10,14 @@ import { useNavigate } from 'react-router-dom';
 
 
 const GrassColourMix = () => {
-  const [dialogue, setDialogue] = useState({name: "", message: "Play around with the colours blue and yellow to help Picasso and Caramel get to the next place!"});
+  const [dialogue, setDialogue] = useState({name: "", message: "Play around with the colours blue and yellow to help Picasso and Caramel get to their next destination!"});
   
   type DialogueData = {
     name: string;
     message: string;
   }
 
-  const [dialogueArray, setDialogueArray] = useState<{name: string; message: string}[]>([{name: "Picasso", message: " Whoa! This place is SO much better than the lava!"}]);
+  const [dialogueArray, setDialogueArray] = useState<{name: string; message: string}[]>([]);
   const [count, setCount] = useState(0);
   const [isDialogueSet, setIsDialogueSet] = useState<boolean>(false);
   const [isActivityDone, setActivityDone] = useState<boolean>(false);
@@ -42,16 +42,15 @@ const GrassColourMix = () => {
       setDialogue({...dialogue, name: newDialougeData.name, message: newDialougeData.message});
       incrementCount();
     } catch (err) {
-      navigate('/activities/colour-mix-lake');
+      if (isActivityDone) {
+        navigate('/activities/colour-mix-lake');
+      }
     }
   }
 
   // Post-activity dialogue 
   const setUpDialogue = () => {
-    addDialogue({name: "Picasso", message: "The fresh air is so calming and relaxing…"});
-    addDialogue({name: "Caramel", message: "Seems like we’re in a grassland. Blue and yellow are two primary colours, and…"});
-    addDialogue({name: "Picasso", message: "They make green, a secondary colour. Right?"});
-    addDialogue({name: "Caramel", message: "Exactly!"});
+    
   }
 
   const mixColours = () => {
@@ -60,6 +59,11 @@ const GrassColourMix = () => {
 
   const markActivityDone = () => {
     setActivityDone(true);
+    setDialogue({name: "Picasso", message: "Whoa! This place is SO much better than the lava!"});
+    addDialogue({name: "Picasso", message: "The fresh air is so calming and relaxing…"});
+    addDialogue({name: "Caramel", message: "Seems like we’re in a grassland. Blue and yellow are two primary colours, and…"});
+    addDialogue({name: "Picasso", message: "They make green, a secondary colour. Right?"});
+    addDialogue({name: "Caramel", message: "Exactly!"});
   }
 
   return (
