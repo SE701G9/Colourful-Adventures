@@ -186,25 +186,54 @@ const FindPrimary = () => {
             </button>
           )}
           <div className='caramel'>
-              <img src={String(caramelNeutral)}/>
+              <img 
+              src={String(caramelNeutral)}/>
           </div>
           <div className="picassoRed">
             {isPicassoHRVisible &&
-              <img src={String(picassoHeartRed)}/>
+              <img 
+              style={{
+                position: 'fixed',
+                right: '30px',
+                bottom: '265px',
+                width: '300px',
+              }}
+              src={String(picassoHeartRed)}/>
             }
           </div>
           <div className="picassoGray">
             {isPicassoNGVisible &&
-              <img src={String(picassoNeutralGray)}/>
+              <img 
+              style={{
+                position: 'fixed',
+                right: '30px',
+                bottom: '265px',
+                width: '300px',
+              }}
+              src={String(picassoNeutralGray)}/>
             }
           </div>
           <div className="picassoBlue">
             {isPicassoCBRVisible &&
-              <img src={String(picassoConfusedBlueRed)}/>
+              <img 
+              style={{
+                position: 'fixed',
+                right: '30px',
+                bottom: '265px',
+                width: '300px',
+              }}
+              src={String(picassoConfusedBlueRed)}/>
             }
           </div>
           <div className="picassoYellow">
-            <img src={String(picassoConfused)}/>
+            <img 
+            style={{
+              position: 'fixed',
+              right: '30px',
+              bottom: '265px',
+              width: '300px',
+            }}
+            src={String(picassoConfused)}/>
           </div>
         </main>
       </div>
