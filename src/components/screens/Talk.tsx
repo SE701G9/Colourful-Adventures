@@ -24,6 +24,15 @@ const Talk = ({ screens, isGrey, isDarkBg }: any) => {
 
   return (
     <MainLayout isDarkBg={isDarkBg}>
+      <img
+        style={{
+          position: 'fixed',
+          left: '40px',
+          bottom: '260px',
+          width: '300px',
+        }}
+        src={require('../../images/character-images/caramel/Caramel-Neutral.png')}
+      />
       {!isGrey ? (
         <img
           style={{

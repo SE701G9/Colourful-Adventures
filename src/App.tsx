@@ -59,7 +59,9 @@ function App() {
             />
             <Route
               path="land-1"
-              element={<Talk screens={landScreens1} isGrey={false} />}
+              element={
+                <Talk screens={landScreens1} isGrey={false} isDarkBg={true} />
+              }
             />
             <Route
               path="land-2"
