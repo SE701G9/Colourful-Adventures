@@ -29,7 +29,6 @@ const Talk = ({ screens }: any) => {
           position: 'fixed',
           right: 0,
           bottom: '20px',
-          height: '1000px',
         }}
         src={require('../../images/avatar.png')}
       />
