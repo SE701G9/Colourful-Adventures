@@ -4,6 +4,11 @@
   height: 100vh;
 }
 
+.bg {
+  background-image: url('/src/images/background-images/bg1.1.png');
+  background-size: cover;
+}
+
 .mascot-image {
   position: fixed;
   bottom: 60px;

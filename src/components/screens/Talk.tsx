@@ -4,7 +4,7 @@ import MainLayout from '../layouts/MainLayout';
 import { getPage } from '../../utils/module';
 import { useNavigate } from 'react-router-dom';
 
-const Talk = ({ screens }: any) => {
+const Talk = ({ screens, isGrey, isDarkBg }: any) => {
   const [page, setPage] = useState(1);
   const navigate = useNavigate();
   const currentPageInfo = getPage(screens, page);
@@ -23,15 +23,27 @@ const Talk = ({ screens }: any) => {
   };
 
   return (
-    <MainLayout>
-      <img
-        style={{
-          position: 'fixed',
-          right: 0,
-          bottom: '20px',
-        }}
-        src={require('../../images/avatar.png')}
-      />
+    <MainLayout isDarkBg={isDarkBg}>
+      {!isGrey ? (
+        <img
+          style={{
+            position: 'fixed',
+            right: 0,
+            bottom: '20px',
+          }}
+          src={require('../../images/avatar.png')}
+        />
+      ) : (
+        <img
+          style={{
+            position: 'fixed',
+            right: '30px',
+            bottom: '260px',
+            width: '300px',
+          }}
+          src={require('../../images/character-images/picasso/Picasso-Neutral-Gray.png')}
+        />
+      )}
       {currentPageInfo && (
         <DialogueMenu
           name={currentPageInfo.speaker}

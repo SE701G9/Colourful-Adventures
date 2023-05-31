@@ -13,10 +13,7 @@ import GrassColourMix from './components/activities/GrassColourMix';
 import LakeColourMix from './components/activities/LakeColourMix';
 import Talk from './components/screens/Talk';
 import { whoAmIScreens } from './data/1-who-am-i';
-import {
-  rememberingScreens1,
-  rememberingScreens2,
-} from './data/2-remembering';
+import { rememberingScreens1, rememberingScreens2 } from './data/2-remembering';
 import {
   landScreens1,
   landScreens2,
@@ -33,18 +30,42 @@ function App() {
           <Route index element={<NavigationPage />} />
           <Route path="1">
             <Route index element={<Module1Page />} />
-            <Route path="who-am-i" element={<Talk screens={whoAmIScreens} />} />
+            <Route
+              path="who-am-i"
+              element={<Talk screens={whoAmIScreens} isGrey={true} />}
+            />
             <Route
               path="remembering-1"
-              element={<Talk screens={rememberingScreens1} />}
+              element={
+                <Talk
+                  screens={rememberingScreens1}
+                  isGrey={true}
+                  isDarkBg={true}
+                />
+              }
             />
             <Route
               path="remembering-2"
-              element={<Talk screens={rememberingScreens2} />}
+              element={
+                <Talk
+                  screens={rememberingScreens2}
+                  isGrey={false}
+                  isDarkBg={true}
+                />
+              }
             />
-            <Route path="land-1" element={<Talk screens={landScreens1} />} />
-            <Route path="land-2" element={<Talk screens={landScreens2} />} />
-            <Route path="land-3" element={<Talk screens={landScreens3} />} />
+            <Route
+              path="land-1"
+              element={<Talk screens={landScreens1} isGrey={false} />}
+            />
+            <Route
+              path="land-2"
+              element={<Talk screens={landScreens2} isGrey={false} />}
+            />
+            <Route
+              path="land-3"
+              element={<Talk screens={landScreens3} isGrey={false} />}
+            />
           </Route>
           <Route path="2" element={<Module2Page />} />
           <Route path="3" element={<Module3Page />} />
