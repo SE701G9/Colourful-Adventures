@@ -32,7 +32,9 @@ function App() {
             <Route index element={<Module1Page />} />
             <Route
               path="who-am-i"
-              element={<Talk screens={whoAmIScreens} isGrey={true} />}
+              element={
+                <Talk screens={whoAmIScreens} isGrey={true} isDarkBg={true} />
+              }
             />
             <Route
               path="remembering-1"
